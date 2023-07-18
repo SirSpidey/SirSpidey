@@ -48,11 +48,11 @@ body:
       label: Team details
       description: Add a link to the team that will administer the repo. If you need a team, specify the GH IDs of the admins and team members.
       value: |
-        Existing team url: https://github.com/orgs/terraform-ibm-modules/teams/\<TEAM-NAME>
+        Existing team url: https://github.com/orgs/terraform-ibm-modules/teams/<TEAM-NAME>
         OR
         New team name
-        - Admin: https://github.com/\<ADMIN_ID>
-        - Admin: https://github.com/\<MEMBER_ID_1>, https://github.com/\<MEMBER_ID_2>
+        - Admin profile ID: https://github.com/<ADMIN_ID>
+        - Member profile IDs: https://github.com/<MEMBER_ID_1>, https://github.com/<MEMBER_ID_2>
     validations:
       required: true
 

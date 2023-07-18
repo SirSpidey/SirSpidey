@@ -47,7 +47,6 @@ body:
     attributes:
       label: More information
       description: Include other information that provides context for this request.
-      placeholder: Add your team name or information about a new team
       value: test
   - type: checkboxes
     id: terms

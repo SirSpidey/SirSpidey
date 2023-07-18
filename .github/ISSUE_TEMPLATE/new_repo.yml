@@ -55,6 +55,8 @@ body:
         New team name
         Admin: Admin: https://github.com/\<ADMIN_ID>
         Members: Admin: https://github.com/\<MEMBER_ID_1>, https://github.com/\<MEMBER_ID_2>
+    validations:
+      required: true
   - type: checkboxes
     id: terms
     attributes:

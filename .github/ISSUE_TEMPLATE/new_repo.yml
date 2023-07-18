@@ -49,7 +49,7 @@ body:
       description: Include other information that provides context for this request.
       placeholder: Add your team name or information about a new team
       value: |
-        Existing team url: https://github.com/orgs/terraform-ibm-modules/teams/\<TEAM-NAME>
+        Existing team url\: https://github.com/orgs/terraform-ibm-modules/teams/\<TEAM-NAME>
   - type: checkboxes
     id: terms
     attributes:

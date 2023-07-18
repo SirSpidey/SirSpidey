@@ -35,8 +35,8 @@ body:
   - type: dropdown
     id: repo-owner
     attributes:
-      label: GitHub team to manage and maintain the repo
-      description: 
+      label: GitHub team that will manage and maintain the repo
+      description: Select whether you have a team in this organization or need one.
       options:
         - I have an existing team
         - I need a new team

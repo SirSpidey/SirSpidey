@@ -43,7 +43,7 @@ body:
     validations:
       required: true    
   - type: textarea
-    id: logs
+    id: team-info
     attributes:
       label: More information
       description: Include other information that provides context for this request.
@@ -57,6 +57,12 @@ body:
         Members: Admin: https://github.com/\<MEMBER_ID_1>, https://github.com/\<MEMBER_ID_2>
     validations:
       required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: More information
+      description: Include other information that provides context for this request.
   - type: checkboxes
     id: terms
     attributes:

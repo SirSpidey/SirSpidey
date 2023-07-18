@@ -36,7 +36,7 @@ body:
     id: repo-owner
     attributes:
       label: GitHub team to manage and maintain the repo
-      description: Add a link to the team that will administer the repo. If you need a team, specify the GH IDs of the admins and team members in **More information**.
+      description: 
       options:
         - I have an existing team
         - I need a new team
@@ -45,12 +45,12 @@ body:
   - type: textarea
     id: team-info
     attributes:
-      label: More information
-      description: Include other information that provides context for this request.
+      label: Team details
+      description: Add a link to the team that will administer the repo. If you need a team, specify the GH IDs of the admins and team members.
       value: |
         Existing team url: https://github.com/orgs/terraform-ibm-modules/teams/\<TEAM-NAME>
         OR
-        **New team name**
+        New team name
         - Admin: https://github.com/\<ADMIN_ID>
         - Admin: https://github.com/\<MEMBER_ID_1>, https://github.com/\<MEMBER_ID_2>
     validations:

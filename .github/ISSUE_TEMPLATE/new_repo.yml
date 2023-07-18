@@ -47,6 +47,16 @@ body:
     attributes:
       label: More information
       description: Include other information that provides context for this request.
+      placeholder: Add your team name or information about a new team
+      value: |
+        Existing team url: https://github.com/orgs/terraform-ibm-modules/teams/<TEAM-NAME>
+        
+        OR
+        
+        New team name
+        Admin: Admin: https://github.com/<ADMIN_ID>
+        Members: Admin: https://github.com/<MEMBER_ID_1>, https://github.com/<MEMBER_ID_2>
+
   - type: checkboxes
     id: terms
     attributes:

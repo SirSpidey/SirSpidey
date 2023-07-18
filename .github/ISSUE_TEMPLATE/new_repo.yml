@@ -32,7 +32,7 @@ body:
       description: The description help users understand what your module does.
     validations:
       required: true
-    - type: dropdown
+  - type: dropdown
     id: repo-owner
     attributes:
       label: GitHub team to manage and maintain the repo

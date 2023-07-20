@@ -49,6 +49,8 @@ body:
         - VMWare
         - Wazi
         - I need a new team
+    validations:
+      required: true        
   - type: input
     id: new-team-name
     attributes:

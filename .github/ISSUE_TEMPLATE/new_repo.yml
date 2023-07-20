@@ -61,13 +61,13 @@ body:
     attributes:
       label: New team admin users
       description: Enter the GitHub IDs of the admins members of the new team.
-      placeholder: List admin user IDs
+      placeholder: List admin user IDs for a new team
   - type: textarea
     id: new-team-merger-users
     attributes:
       label: New team merger users
       description: Enter the GitHub IDs of the members who can merge pull requests to the new repo.
-      placeholder: List merger user IDs
+      placeholder: List merger user IDs for a new team
   - type: textarea
     id: logs
     attributes:
@@ -81,4 +81,3 @@ body:
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
-  

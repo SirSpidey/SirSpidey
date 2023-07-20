@@ -33,15 +33,6 @@ body:
     validations:
       required: true
   - type: dropdown
-    attributes:
-      label: "New or existing repo?"
-      description: Select whether you are migrating code from another repo or creating something new.
-      options:
-        - Migrating existing repo
-        - Contributing new repo
-    validations:
-      required: true
-  - type: dropdown
     id: existing-team
     attributes:
       label: Maintaining team

@@ -13,7 +13,7 @@ body:
       description: Select whether you are migrating code from another repo or creating something new.
       options:
         - Migrating existing repo
-        - Contributing new repo  
+        - Contributing new repo
     validations:
       required: true
   - type: input
@@ -50,7 +50,7 @@ body:
         - Wazi
         - I need a new team
     validations:
-      required: true        
+      required: true
   - type: input
     id: new-team-name
     attributes:
@@ -61,11 +61,13 @@ body:
     attributes:
       label: New team admin users
       description: Enter the GitHub IDs of the admins members of the new team.
+      placeholder: List admin user IDs
   - type: textarea
     id: new-team-merger-users
     attributes:
       label: New team merger users
       description: Enter the GitHub IDs of the members who can merge pull requests to the new repo.
+      placeholder: List merger user IDs
   - type: textarea
     id: logs
     attributes:
@@ -79,3 +81,4 @@ body:
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
+  

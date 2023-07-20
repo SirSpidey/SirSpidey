@@ -58,13 +58,6 @@ body:
         - VMWare
         - Wazi
         - I need a new team
-  - type: checkboxes
-    id: new-team-needed
-    attributes:
-      label: New team
-      description: If you need a team, specify the GitHub IDs of the admins and team members.
-      options:
-        - label: I need a new team
   - type: input
     id: new-team-name
     attributes:

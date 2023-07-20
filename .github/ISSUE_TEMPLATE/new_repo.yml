@@ -13,7 +13,7 @@ body:
       description: Select whether you are migrating code from another repo or creating something new.
       options:
         - Migrating existing repo
-        - Contributing new repo
+        - Contributing new repo  
     validations:
       required: true
   - type: input

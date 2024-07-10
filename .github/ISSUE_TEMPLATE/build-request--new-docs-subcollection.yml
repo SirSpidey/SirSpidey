@@ -1,0 +1,39 @@
+name: 🆕 "Build request - New docs subcollection"
+description: I want to deliver a new set of public or internal content in the IBM Cloud docs
+title: "Build request: New subcollection for <my service>"
+labels: [Build Request]
+assignees:
+  - cjcarpen
+  - SirSpidey
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request a repo for new public or internal content in IBM Cloud docs.
+  - type: dropdown
+    attributes:
+      label: "The type of docs you will publish"
+      description: Are you delivering public product docs for services or software, or internal-only content? If your service docs will ever go public with your product, choose external. External docs are common. Internal-only docs are added to a separate org, and your content will never be available to non-IBMers.
+      options:
+        - External docs for a managed IBM Cloud service (default).
+        - External docs for a software product on IBM Cloud.
+        - Internal-only docs.
+        - Internal-only guidance docs. For example, a developer guide.
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: service-name
+    attributes:
+      label: IBM Cloud product name
+      description: If your docs are associated with a product on IBM Cloud, identify its `service-name`. To find your service-name, search https://globalcatalog.test.cloud.ibm.com/search and use the value in the `Name` column. This value is used as your repo name and will be part of your docs URL.
+      placeholder: retrieve-and-rank
+    validations:
+      required: false
+  - type: textarea
+    id: docs-description
+    attributes:
+      label: What will this doc set cover?
+      description: Provide a description of what content will be in this repo.
+    validations:
+      required: true

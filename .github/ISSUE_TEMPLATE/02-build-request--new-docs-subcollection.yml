@@ -10,30 +10,110 @@ body:
     attributes:
       value: |
         Use this template to request a repo for new public or internal content in IBM Cloud docs.
+
   - type: dropdown
     attributes:
       label: "The type of docs you will publish"
-      description: Are you delivering public product docs for services or software, or internal-only content? If your service docs will ever go public with your product, choose external. External docs are common. Internal-only docs are added to a separate org, and your content will never be available to non-IBMers.
+      description: Are you delivering public product docs for services or software, or internal-only content? If your service docs ever will be publicly available, choose external. Internal-only docs are added to a separate org, and your content will never be available to non-IBMers. Guidance docs are collections such as developer guides.
       options:
-        - External docs for a managed IBM Cloud service (default).
-        - External docs for a software product on IBM Cloud.
-        - Internal-only docs.
-        - Internal-only guidance docs. For example, a developer guide.
+        - External docs for an IBM Cloud service (default)
+        - External docs for an IBM Cloud software product
+        - Internal-only docs
+        - Internal-only guidance docs
       default: 0
     validations:
       required: true
-  - type: input
-    id: service-name
-    attributes:
-      label: IBM Cloud product name
-      description: If your docs are associated with a product on IBM Cloud, identify its `service-name`. To find your service-name, search https://globalcatalog.test.cloud.ibm.com/search and use the value in the `Name` column. This value is used as your repo name and will be part of your docs URL.
-      placeholder: retrieve-and-rank
-    validations:
-      required: false
+
   - type: textarea
     id: docs-description
     attributes:
       label: What will this doc set cover?
-      description: Provide a description of what content will be in this repo.
+      description: Provide a brief description of what content will be in this repo.
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        "### Docs for a product on IBM Cloud"
+
+        If your docs are associated with a product on IBM Cloud, include information from your product's entry. Skip this section if your docs aren't associated with a product.
+  - type: input
+    id: gc-url
+    attributes:
+      label: Global Catalog URL
+      description: To find your Global Catalog record, search https://globalcatalog.test.cloud.ibm.com/search.
+    validations:
+      required: false
+  - type: input
+    id: gc-service-name
+    attributes:
+      label: Global Catalog service name
+      description: From the Global Catalog entry for your product, enter the value in the `Name` column.
+    validations:
+      required: false
+  - type: textarea
+    id: sf-details
+    attributes:
+      label: Links to your Service Framework issues
+      description: |
+        Both services and software must follow the Service Framework requirements, which for documentation include the [User Experience (UX)](https://test.cloud.ibm.com/docs/service-framework?topic=service-framework-user-experience-ux-) requirements **UX025 Documentation** and **UX033 End-to-end Content Experience Review**.
+
+        You should have an issue for each Service Framework requirement.
+      placeholder: |
+        Link to your UX025 issue:
+        Link to your UX033 issue:
+  - type: markdown
+    attributes:
+      value: |
+        "### No product on IBM Cloud"
+
+        If your docs are not associated with a product on IBM Cloud, what name would you like for the new docs repo?
+  - type: input
+    id: repo-name
+    attributes:
+      label: Suggested repo name
+      description: |
+
+        This value is used as your docs repository name and will be part of your docs URL.
+
+        For example, the Retrieve and Rank `service-name` is `retrieve-and-rank`.
+
+        "Make sure that the name follows these rules:"
+        - All lowercase
+        - Can't include spaces but can include hyphens (`-`)
+        - Fewer than 32 characters
+      placeholder: "example: retrieve-and-rank"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        "### Your GitHub and Slack IDs"
+
+        Provide your GitHub, GitHub Enterprise, and Slack information. We use this information to provide you access to your repo and build channels.
+  - type: input
+    id: ghe-id
+    attributes:
+      label: GitHub Enterprise ID
+      description: Enter your GHE ID. Click your profile icon in the upper-right of the screen and look for "Signed in as". That is your ID.
+      placeholder: "example: https://github.ibm.com/cjcarpen"
+  - type: input
+    id: gh-id
+    attributes:
+      label: Public GitHub ID
+      description: Enter your public GitHub ID. Click your profile icon in the upper-right of the screen. Your ID is above your name.
+      placeholder: "example: https://github.com/cjcarpen"
+  - type: input
+    id: slack-id
+    attributes:
+      label: Slack Name
+      description: |
+        Enter your slack display name.
+
+        1.  From your Slack desktop app, click your profile picture in the sidebar.
+        1.  Select **Profile**.
+        1.  Click the 3-dot **More Actions** icon.
+        1.  Click **Copy display name**.
+      placeholder: "example: @carolyn"

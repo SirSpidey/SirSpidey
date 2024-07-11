@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: cloud-doc-builds Slack channel
+    url: https://ibm.enterprise.slack.com/archives/C3P5VAKHR
+    about: Join the discussions in Slack.
+  - name: ContentOps release notes
+    url: https://test.cloud.ibm.com/docs-internal/writing?topic=writing-release-notes
+    about: Before you open an issue, check out changes in the release notes.

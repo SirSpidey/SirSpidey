@@ -1,4 +1,4 @@
-name: 🆕 Build request - New docs subcollection
+name: ✨ 🍱 New docs subcollection request
 description: I want to deliver a new set of public or internal content in the IBM Cloud docs
 title: "Build request: New subcollection for <my service>"
 labels: [Build Request]
@@ -35,7 +35,7 @@ body:
         - Docs for an IBM Cloud software product (External)
         - Internal-only docs for a product
         - Guides (Internal-only)
-      default: 1
+      default: 0
     validations:
       required: true
 

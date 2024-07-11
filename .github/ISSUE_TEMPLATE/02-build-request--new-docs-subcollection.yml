@@ -22,12 +22,12 @@ body:
       description: |
         Are you delivering public product docs for services or software, or internal-only content?
 
-        - If your service docs ever will be publicly available, choose external.
-
+        - If your service docs will be publicly available at some point, choose **External docs**.
             - Example service docs: [Virtual server for VPC](https://cloud.ibm.com/docs/vpc)
             - Example software docs: [Power Virtual Server for SAP HANA](https://cloud.ibm.com/docs/sap-powervs).
-        - Internal-only docs are added to a separate org, and your content will never be available to non-IBMers. Example: [Supplier Management Framework](https://test.cloud.ibm.com/docs-internal/supplier-mgmt-framework).
-            - Guidance docs are collections such as developer guides. Example: [Developing in IBM Cloud](https://test.cloud.ibm.com/docs-internal/get-coding).
+        - If your content will never be available to non-IBMers, chose **Internal-only**.
+            - Example internal-only docs: [Supplier Management Framework](https://test.cloud.ibm.com/docs-internal/supplier-mgmt-framework).
+        -     Internal-only Guidance docs are collections such as developer guides. Example: [Developing in IBM Cloud](https://test.cloud.ibm.com/docs-internal/get-coding).
       options:
         - External docs for an IBM Cloud service (default)
         - External docs for an IBM Cloud software product
@@ -50,7 +50,7 @@ body:
       value: "### Docs for a product on IBM Cloud"
   - type: markdown
     attributes:
-      value: If your docs are associated with a product on IBM Cloud, include information from your product's entry. Skip this section if your docs aren't associated with a product.
+      value: If you selected External docs for a service or software product, include information from your product's entry. Skip this section if your docs aren't associated with a product.
   - type: input
     id: gc-url
     attributes:
@@ -62,7 +62,7 @@ body:
     id: gc-service-name
     attributes:
       label: Global Catalog service name
-      description: From the Global Catalog entry for your product, enter the value in the `Name` column. For example, the service name for Hyper Protect Crypto Services is `hs-crypto`.
+      description: From the Global Catalog entry for your product, enter the value in the `Name` column. For example, the service name for Hyper Protect Crypto Services is `hs-crypto`. We use the service name as your docs repository name, and it will be part of your docs URL.
     validations:
       required: false
   - type: textarea
@@ -81,17 +81,15 @@ body:
       value: "### No product on IBM Cloud"
   - type: markdown
     attributes:
-      value: However, if your docs are not associated with a product on IBM Cloud, what name would you like for the new docs repo?
+      value: However, if your docs are not associated with a product on IBM Cloud and you selected Internal-only docs, what name would you like for the new docs repo?
   - type: input
     id: repo-name
     attributes:
       label: Suggested repo name
       description: |
-
         This value is used as your docs repository name and will be part of your docs URL.
-        - All lowercase
-        - Can't include spaces but can include hyphens (`-`)
-        - Fewer than 32 characters
+        - All lowercase and fewer than 32 characters
+        - No spaces, but can include hyphens (`-`)
       placeholder: "example: terraform-handbook"
     validations:
       required: false
@@ -101,7 +99,7 @@ body:
       value: "### Your GitHub and Slack IDs"
   - type: markdown
     attributes:
-      value: Provide your GitHub, GitHub Enterprise, and Slack information. We use this information to provide you access to your repo and build channels.
+      value: Provide the GitHub, GitHub Enterprise, and Slack information for the person who will be the main docs contact. We use this information to provide access to your repo and build channels. You can add more contributors after your repo is created.
   - type: input
     id: ghe-id
     attributes:

@@ -8,18 +8,31 @@ assignees:
 body:
   - type: markdown
     attributes:
+      value: "### Type of docs"
+  - type: markdown
+    attributes:
       value: |
         Use this template to request a repo for new public or internal content in IBM Cloud docs.
+
+        Make sure you update `<my service>` in **Add a title**.
 
   - type: dropdown
     attributes:
       label: "The type of docs you will publish"
-      description: Are you delivering public product docs for services or software, or internal-only content? If your service docs ever will be publicly available, choose external. Internal-only docs are added to a separate org, and your content will never be available to non-IBMers. Guidance docs are collections such as developer guides.
+      description: |
+        Are you delivering public product docs for services or software, or internal-only content?
+
+        - If your service docs ever will be publicly available, choose external.
+
+            - Example service docs: [Virtual server for VPC](https://cloud.ibm.com/docs/vpc)
+            - Example software docs: [Power Virtual Server for SAP HANA](https://cloud.ibm.com/docs/sap-powervs).
+        - Internal-only docs are added to a separate org, and your content will never be available to non-IBMers. Example: [Supplier Management Framework](https://test.cloud.ibm.com/docs-internal/supplier-mgmt-framework).
+            - Guidance docs are collections such as developer guides. Example: [Developing in IBM Cloud](https://test.cloud.ibm.com/docs-internal/get-coding).
       options:
         - External docs for an IBM Cloud service (default)
         - External docs for an IBM Cloud software product
         - Internal-only docs
-        - Internal-only guidance docs
+        - Internal-only guides
       default: 0
     validations:
       required: true
@@ -28,16 +41,16 @@ body:
     id: docs-description
     attributes:
       label: What will this doc set cover?
-      description: Provide a brief description of what content will be in this repo.
+      description: Provide a brief description of what content will be in this repo. This information helps confirm the type of docs.
     validations:
       required: true
 
   - type: markdown
     attributes:
-      value: |
-        "### Docs for a product on IBM Cloud"
-
-        If your docs are associated with a product on IBM Cloud, include information from your product's entry. Skip this section if your docs aren't associated with a product.
+      value: "### Docs for a product on IBM Cloud"
+  - type: markdown
+    attributes:
+      value: If your docs are associated with a product on IBM Cloud, include information from your product's entry. Skip this section if your docs aren't associated with a product.
   - type: input
     id: gc-url
     attributes:
@@ -49,7 +62,7 @@ body:
     id: gc-service-name
     attributes:
       label: Global Catalog service name
-      description: From the Global Catalog entry for your product, enter the value in the `Name` column.
+      description: From the Global Catalog entry for your product, enter the value in the `Name` column. For example, the service name for Hyper Protect Crypto Services is `hs-crypto`.
     validations:
       required: false
   - type: textarea
@@ -68,7 +81,7 @@ body:
       value: "### No product on IBM Cloud"
   - type: markdown
     attributes:
-      value: If your docs are not associated with a product on IBM Cloud, what name would you like for the new docs repo?
+      value: However, if your docs are not associated with a product on IBM Cloud, what name would you like for the new docs repo?
   - type: input
     id: repo-name
     attributes:
@@ -79,7 +92,7 @@ body:
         - All lowercase
         - Can't include spaces but can include hyphens (`-`)
         - Fewer than 32 characters
-      placeholder: "example: retrieve-and-rank"
+      placeholder: "example: terraform-handbook"
     validations:
       required: false
 

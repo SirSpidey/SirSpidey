@@ -9,7 +9,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before you open an issue, [check the troubleshooting guide](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-requesting-help).
+        Before you open an issue, [check the troubleshooting guide](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-requesting-help). If you're not sure if this is to complete this request, ask a question in [#cloud-doc-builds](https://ibm.enterprise.slack.com/archives/C3P5VAKHR) in Slack.
 
         Use this template to request a repo for new public or internal content in IBM Cloud docs.
   - type: markdown
@@ -17,8 +17,7 @@ body:
       value: "## Type of docs"
   - type: markdown
     attributes:
-      value: |
-        If you're not sure if this is to fill out this request, ask a question in [#cloud-doc-builds](https://ibm.enterprise.slack.com/archives/C3P5VAKHR) in Slack.
+      value: Tell us about your new documentation.
   - type: dropdown
     attributes:
       label: "The type of docs you will publish"
@@ -30,7 +29,7 @@ body:
             - Software product docs example: [Power Virtual Server for SAP HANA](https://cloud.ibm.com/docs/sap-powervs).
         - If your content will never be available to non-IBMers, chose **Internal-only**.
             - Internal-only docs are for IBM Cloud products whose docs will never be available to non-IBMers. For example, [Supplier Management Framework](https://test.cloud.ibm.com/docs-internal/supplier-mgmt-framework).
-            - Internal-only guides are for internal guidance, such as a developer guide. Example: [Developing in IBM Cloud](https://test.cloud.ibm.com/docs-internal/get-coding).
+            - Guides are for internal content that's not tied to a product, such as a developer guide. Example: [Developing in IBM Cloud](https://test.cloud.ibm.com/docs-internal/get-coding).
       options:
         - Docs for an IBM Cloud service (External)
         - Docs for an IBM Cloud software product (External)
@@ -53,7 +52,7 @@ body:
       value: "## Docs for a product on IBM Cloud"
   - type: markdown
     attributes:
-      value: If you selected either external or internal-only docs for an IBM Cloud service or software product, include information from your product's Global Catalog entry. Skip this section if your docs aren't associated with a product.
+      value: If you selected either external or internal-only docs for a product, include information from your product's Global Catalog entry. Skip this section if your docs aren't associated with a product.
   - type: input
     id: gc-url
     attributes:
@@ -68,9 +67,6 @@ body:
       description: From the Global Catalog entry for your product, enter the value in the `Name` column. For example, the service name for Hyper Protect Crypto Services is `hs-crypto`. We use the service name as your docs repository name, and it will be part of your docs URL.
     validations:
       required: false
-  - type: markdown
-    attributes:
-      value: "### Service Framework UX issues"
   - type: markdown
     attributes:
       value: Both services and software follow Service Framework requirements, which for documentation include the [User Experience (UX)](https://test.cloud.ibm.com/docs-internal/service-framework?topic=service-framework-user-experience-ux-) requirements **UX025 Documentation** and **UX033 End-to-end Content Experience Review**. You should have an issue for each Service Framework requirement.
@@ -130,7 +126,7 @@ body:
     id: gh-id
     attributes:
       label: Public GitHub ID
-      description: Enter your public GitHub ID. [In GH](https://github.com/), click your profile icon in the upper-right of the screen. Your ID is above your name. Your public GH ID might not be the same as your GHE ID.
+      description: Enter your public GitHub ID. [In GH](https://github.com/), click your profile icon in the upper-right of the screen. Your ID is above your name. Your public GH ID might not be the same as your GitHub Enterprise ID.
       placeholder: "example: https://github.com/sirspidey"
     validations:
       required: true

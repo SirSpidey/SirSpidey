@@ -65,10 +65,10 @@ body:
         Link to your UX033 issue:
   - type: markdown
     attributes:
-      value: |
-        "### No product on IBM Cloud"
-
-        If your docs are not associated with a product on IBM Cloud, what name would you like for the new docs repo?
+      value: "### No product on IBM Cloud"
+  - type: markdown
+    attributes:
+      value: If your docs are not associated with a product on IBM Cloud, what name would you like for the new docs repo?
   - type: input
     id: repo-name
     attributes:
@@ -76,10 +76,6 @@ body:
       description: |
 
         This value is used as your docs repository name and will be part of your docs URL.
-
-        For example, the Retrieve and Rank `service-name` is `retrieve-and-rank`.
-
-        "Make sure that the name follows these rules:"
         - All lowercase
         - Can't include spaces but can include hyphens (`-`)
         - Fewer than 32 characters
@@ -89,22 +85,26 @@ body:
 
   - type: markdown
     attributes:
-      value: |
-        "### Your GitHub and Slack IDs"
-
-        Provide your GitHub, GitHub Enterprise, and Slack information. We use this information to provide you access to your repo and build channels.
+      value: "### Your GitHub and Slack IDs"
+  - type: markdown
+    attributes:
+      value: Provide your GitHub, GitHub Enterprise, and Slack information. We use this information to provide you access to your repo and build channels.
   - type: input
     id: ghe-id
     attributes:
       label: GitHub Enterprise ID
       description: Enter your GHE ID. Click your profile icon in the upper-right of the screen and look for "Signed in as". That is your ID.
       placeholder: "example: https://github.ibm.com/cjcarpen"
+    validations:
+      required: true
   - type: input
     id: gh-id
     attributes:
       label: Public GitHub ID
       description: Enter your public GitHub ID. Click your profile icon in the upper-right of the screen. Your ID is above your name.
       placeholder: "example: https://github.com/cjcarpen"
+    validations:
+      required: true
   - type: input
     id: slack-id
     attributes:
@@ -117,3 +117,5 @@ body:
         1.  Click the 3-dot **More Actions** icon.
         1.  Click **Copy display name**.
       placeholder: "example: @carolyn"
+    validations:
+      required: true

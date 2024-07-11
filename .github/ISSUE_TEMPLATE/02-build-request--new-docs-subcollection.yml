@@ -22,7 +22,7 @@ body:
       description: |
         Are you delivering public product docs for services or software, or internal-only content?
 
-        - If your service docs will be publicly available at some point, choose one of the External** options.
+        - If your service docs will be publicly available at some point, choose one of the **External** options.
             - Service docs example: [Virtual server for VPC](https://cloud.ibm.com/docs/vpc)
             - Software product docs example: [Power Virtual Server for SAP HANA](https://cloud.ibm.com/docs/sap-powervs).
         - If your content will never be available to non-IBMers, chose **Internal-only**.
@@ -50,7 +50,7 @@ body:
       value: "### Docs for a product on IBM Cloud"
   - type: markdown
     attributes:
-      value: If you selected External docs for a service or software product, include information from your product's entry. Skip this section if your docs aren't associated with a product.
+      value: If you selected external docs for an IBM Cloud service or software product, include information from your product's entry. Skip this section if your docs aren't associated with a product.
   - type: input
     id: gc-url
     attributes:
@@ -70,9 +70,7 @@ body:
     attributes:
       label: Links to your Service Framework issues
       description: |
-        Both services and software must follow the Service Framework requirements, which for documentation include the [User Experience (UX)](https://test.cloud.ibm.com/docs/service-framework?topic=service-framework-user-experience-ux-) requirements **UX025 Documentation** and **UX033 End-to-end Content Experience Review**.
-
-        You should have an issue for each Service Framework requirement.
+        Both services and software must follow the Service Framework requirements, which for documentation include the [User Experience (UX)](https://test.cloud.ibm.com/docs/service-framework?topic=service-framework-user-experience-ux-) requirements **UX025 Documentation** and **UX033 End-to-end Content Experience Review**. You should have an issue for each Service Framework requirement.
       placeholder: |
         Link to your UX025 issue:
         Link to your UX033 issue:
@@ -87,9 +85,11 @@ body:
     attributes:
       label: Suggested repo name
       description: |
+        Add a value here only if you can't specify your Global Catalog information previously.
+
         This value is used as your docs repository name and will be part of your docs URL.
         - All lowercase and fewer than 32 characters
-        - No spaces, but can include hyphens (`-`)
+        - No spaces, but hyphens (`-`) are allowed
       placeholder: "example: terraform-handbook"
     validations:
       required: false
@@ -99,7 +99,9 @@ body:
       value: "### Your GitHub and Slack IDs"
   - type: markdown
     attributes:
-      value: Provide the GitHub, GitHub Enterprise, and Slack information for the person who will be the main docs contact. We use this information to provide access to your repo and build channels. You can add more contributors after your repo is created.
+      value: Provide the GitHub, GitHub Enterprise, and Slack information for the person who will be the main docs contact. We use this information to provide access to your repo and build channels.
+
+      :information_source: **Tip:** You can add more contributors after your repo is created.
   - type: input
     id: ghe-id
     attributes:

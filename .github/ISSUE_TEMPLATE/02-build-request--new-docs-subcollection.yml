@@ -5,6 +5,8 @@ labels: [Build Request]
 assignees:
   - cjcarpen
   - SirSpidey
+projects:
+  - SirSpidey/1
 body:
   - type: markdown
     attributes:

@@ -101,7 +101,7 @@ body:
     attributes:
       value: Provide the GitHub, GitHub Enterprise, and Slack information for the person who will be the main docs contact. We use this information to provide access to your repo and build channels.
 
-      :information_source: **Tip:** You can add more contributors after your repo is created.
+      ℹ️ **Tip:** You can add more contributors after your repo is created.
   - type: input
     id: ghe-id
     attributes:

@@ -159,3 +159,6 @@ body:
       options:
         - label: I updated the title
           required: true
+  - type: markdown
+    attributes:
+      value: Build admins, see the [IBM Cloud Docs Build](https://github.ibm.com/cloud-doc-build/docs-build/wiki/IBM-Cloud-Docs-Build) tasks.

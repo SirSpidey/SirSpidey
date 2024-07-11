@@ -22,18 +22,18 @@ body:
       description: |
         Are you delivering public product docs for services or software, or internal-only content?
 
-        - If your service docs will be publicly available at some point, choose **External docs**.
-            - Example service docs: [Virtual server for VPC](https://cloud.ibm.com/docs/vpc)
-            - Example software docs: [Power Virtual Server for SAP HANA](https://cloud.ibm.com/docs/sap-powervs).
+        - If your service docs will be publicly available at some point, choose one of the External** options.
+            - Service docs example: [Virtual server for VPC](https://cloud.ibm.com/docs/vpc)
+            - Software product docs example: [Power Virtual Server for SAP HANA](https://cloud.ibm.com/docs/sap-powervs).
         - If your content will never be available to non-IBMers, chose **Internal-only**.
             - Example internal-only docs: [Supplier Management Framework](https://test.cloud.ibm.com/docs-internal/supplier-mgmt-framework).
-        -     Internal-only Guidance docs are collections such as developer guides. Example: [Developing in IBM Cloud](https://test.cloud.ibm.com/docs-internal/get-coding).
+            - Internal-only guides are for internal guidance, such as a developer guide. Example: [Developing in IBM Cloud](https://test.cloud.ibm.com/docs-internal/get-coding).
       options:
-        - External docs for an IBM Cloud service (default)
-        - External docs for an IBM Cloud software product
+        - Docs for an IBM Cloud service (External)
+        - Docs for an IBM Cloud software product (External)
         - Internal-only docs
-        - Internal-only guides
-      default: 0
+        - Guides (Internal-only)
+      default: 1
     validations:
       required: true
 

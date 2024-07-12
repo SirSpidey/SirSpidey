@@ -32,8 +32,8 @@ body:
     attributes:
       label: "The type of docs you will publish"
       options:
-        - Docs for an IBM Cloud service (External)
-        - Docs for an IBM Cloud software product (External)
+        - Docs for a service on IBM Cloud (External)
+        - Docs for a software product on IBM Cloud (External)
         - Internal-only docs for a product
         - Guides (Internal-only)
       default: 0
@@ -111,7 +111,7 @@ body:
 
   - type: markdown
     attributes:
-      value: "## Your GitHub and Slack IDs"
+      value: "## GitHub and Slack IDs"
   - type: markdown
     attributes:
       value: Provide the GitHub, GitHub Enterprise, and Slack information for the person who will be the main docs contact. We use this information to provide access to your repo and build channels.
@@ -122,7 +122,7 @@ body:
     id: ghe-id
     attributes:
       label: GitHub Enterprise ID
-      description: Enter your GHE ID. [In GHE](https://github.ibm.com/), click your profile icon in the upper-right of the screen and look for "Signed in as" for your ID.
+      description: Enter the person's GHE ID. [In GHE](https://github.ibm.com/), click your profile icon in the upper-right of the screen and look for "Signed in as" for your ID.
       placeholder: "example: https://github.ibm.com/allen-dean"
     validations:
       required: true
@@ -130,7 +130,7 @@ body:
     id: gh-id
     attributes:
       label: Public GitHub ID
-      description: Enter your public GitHub ID. [In GH](https://github.com/), click your profile icon in the upper-right of the screen. Your ID is above your name. Your public GH ID might not be the same as your GitHub Enterprise ID.
+      description: Enter the person's public GitHub ID. [In GH](https://github.com/), click your profile icon in the upper-right of the screen. Your ID is above your name. Your public GH ID might not be the same as your GitHub Enterprise ID.
       placeholder: "example: https://github.com/sirspidey"
     validations:
       required: true
@@ -139,13 +139,13 @@ body:
     attributes:
       label: Slack Name
       description: |
-        Enter your slack display name.
+        Enter the person's Slack display name.
 
-        1.  From your Slack desktop app, click your profile picture in the sidebar.
+        1.  From the Slack desktop app, click your profile picture in the sidebar.
         1.  Select **Profile**.
         1.  Click the 3-dot **More Actions** icon.
         1.  Click **Copy display name**.
-      placeholder: "example: @carolyn"
+      placeholder: "example: @allen.dean"
     validations:
       required: true
   - type: textarea

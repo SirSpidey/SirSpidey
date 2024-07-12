@@ -75,7 +75,7 @@ body:
     id: sf-url-ux025
     attributes:
       label: Link to your UX025 issue
-      description: Your SF issue tracking the requirement to create documentation.
+      description: Your SF issue that tracks the requirement to create documentation.
       placeholder: https://github.ibm.com/Service-Framework/
     validations:
       required: false
@@ -83,7 +83,7 @@ body:
     id: sf-url-ux033
     attributes:
       label: Link to your UX033 issue
-      description: Your SF issue tracking the requirement to review content experience plans.
+      description: Your SF issue that tracks the requirement to review your content experience plans.
       placeholder: https://github.ibm.com/Service-Framework/
     validations:
       required: false

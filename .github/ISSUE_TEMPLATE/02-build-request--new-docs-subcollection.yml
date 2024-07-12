@@ -16,15 +16,11 @@ body:
         Use this template to request a repo for new public or internal content in IBM Cloud docs.
   - type: markdown
     attributes:
-      value: "## Type of docs"
+      value: "## External or internal docs"
   - type: markdown
     attributes:
-      value: Tell us about your new documentation.
-  - type: dropdown
-    attributes:
-      label: "The type of docs you will publish"
-      description: |
-        Are you delivering public product docs for services or software, or internal-only content?
+      value: |
+        Tell us about your new documentation. Are you delivering public product docs for services or software, or internal-only content?
 
         - If your service docs will be publicly available at some point, choose one of the **External** options.
             - Service docs example: [Virtual server for VPC](https://cloud.ibm.com/docs/vpc)
@@ -32,6 +28,9 @@ body:
         - If your content will never be available to non-IBMers, chose **Internal-only**.
             - Internal-only docs are for IBM Cloud products whose docs will never be available to non-IBMers. For example, [Supplier Management Framework](https://test.cloud.ibm.com/docs-internal/supplier-mgmt-framework).
             - Guides are for internal content that's not tied to a product, such as a developer guide. Example: [Developing in IBM Cloud](https://test.cloud.ibm.com/docs-internal/get-coding).
+  - type: dropdown
+    attributes:
+      label: "The type of docs you will publish"
       options:
         - Docs for an IBM Cloud service (External)
         - Docs for an IBM Cloud software product (External)
@@ -71,19 +70,21 @@ body:
       required: false
   - type: markdown
     attributes:
-      value: Both services and software follow Service Framework requirements, which for documentation include the [User Experience (UX)](https://test.cloud.ibm.com/docs-internal/service-framework?topic=service-framework-user-experience-ux-) requirements **UX025 Documentation** and **UX033 End-to-end Content Experience Review**. You should have an issue for each Service Framework requirement.
+      value: Both services and software follow Service Framework requirements, which for documentation include the [User Experience (UX)](https://test.cloud.ibm.com/docs-internal/service-framework?topic=service-framework-user-experience-ux-) requirements **UX025 Documentation** and **UX033 End-to-end Content Experience Review**. You should have an issue for each requirement in the [Service Framework GHE org](https://github.ibm.com/Service-Framework).
   - type: input
     id: sf-url-ux025
     attributes:
       label: Link to your UX025 issue
-      description: See [UX033 guidance](https://test.cloud.ibm.com/docs-internal/service-framework?topic=service-framework-user-experience-ux-#ux025-documentation).
+      description: Your SF issue tracking the requirement to create documentation.
+      value: https://github.ibm.com/Service-Framework/
     validations:
       required: false
   - type: input
     id: sf-url-ux033
     attributes:
       label: Link to your UX033 issue
-      description: See [UX033 guidance](https://test.cloud.ibm.com/docs-internal/service-framework?topic=service-framework-user-experience-ux-#ux033-end-to-end-content-experience-review).
+      description: Your SF issue tracking the requirement to review content experience plans.
+      value: https://github.ibm.com/Service-Framework/
     validations:
       required: false
 
@@ -92,17 +93,18 @@ body:
       value: "## No product on IBM Cloud"
   - type: markdown
     attributes:
-      value: If your docs are not associated with a product on IBM Cloud and you selected internal-only docs, what name would you like for the new docs repo?
-  - type: input
-    id: repo-name
-    attributes:
-      label: Suggested repo name
-      description: |
+      value: |
+        If your docs are not associated with a product on IBM Cloud and you selected internal-only docs, what name would you like for the new docs repo?
+
         Add a value here only if you can't specify your Global Catalog information previously.
 
         This value is used as your docs repository name and will be part of your docs URL.
         - All lowercase and fewer than 32 characters
         - No spaces, but hyphens (`-`) are allowed
+  - type: input
+    id: repo-name
+    attributes:
+      label: Suggested repo name
       placeholder: "example: terraform-handbook"
     validations:
       required: false

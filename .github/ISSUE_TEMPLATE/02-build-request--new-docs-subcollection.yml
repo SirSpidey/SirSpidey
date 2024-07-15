@@ -14,6 +14,8 @@ body:
         Before you open an issue, [check the troubleshooting guide](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-requesting-help). If you're not sure if this is to complete this request, ask a question in [#cloud-doc-builds](https://ibm.enterprise.slack.com/archives/C3P5VAKHR) in Slack.
 
         Use this template to request a repo for new public or internal content in IBM Cloud docs.
+
+# Info about the requested subcollection
   - type: markdown
     attributes:
       value: "## External or internal docs"
@@ -39,7 +41,6 @@ body:
       default: 0
     validations:
       required: true
-
   - type: textarea
     id: docs-description
     attributes:
@@ -48,6 +49,7 @@ body:
     validations:
       required: true
 
+# Details about docs connected to a product
   - type: markdown
     attributes:
       value: "## Docs for a product on IBM Cloud"
@@ -88,6 +90,7 @@ body:
     validations:
       required: false
 
+# Details about docs with no product
   - type: markdown
     attributes:
       value: "## No product on IBM Cloud"
@@ -109,6 +112,7 @@ body:
     validations:
       required: false
 
+# Contact info
   - type: markdown
     attributes:
       value: "## GitHub and Slack IDs"
@@ -148,6 +152,8 @@ body:
       placeholder: "example: @allen.dean"
     validations:
       required: true
+
+# Closing section
   - type: textarea
     id: other-info
     attributes:

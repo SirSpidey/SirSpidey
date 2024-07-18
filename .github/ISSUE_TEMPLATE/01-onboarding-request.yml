@@ -1,0 +1,66 @@
+name: ✨ 👷 Onboarding request to join IBM Cloud content development
+description: I am new to IBM Cloud docs. Please help me onboard.
+title: "Onboarding request"
+labels: [Build Request, onboarding]
+assignees:
+  - cjcarpen
+  - SirSpidey
+  - Kent-Hall
+  - mtompki
+projects:
+  - SirSpidey/1
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Welcome to IBM Cloud docs content development.
+
+        Use this template to provide us with the information to get you access.
+
+        For more information about getting access and the tools, see [Getting started](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-get-started-onboarding) in the writers guide.
+  - type: input
+
+# Contact info
+  - type: markdown
+    attributes:
+      value: "## Provide your IDs"
+  - type: markdown
+    attributes:
+      value: Provide the email address, GitHub, GitHub Enterprise, and Slack information for the person who we're onboarding.
+  - type: input
+    id: email
+    attributes:
+      label: IBM email address
+  - type: input
+    id: ghe-id
+    attributes:
+      label: GitHub Enterprise ID
+      description: Enter the person's GHE ID. [In GHE](https://github.ibm.com/), click your profile icon in the upper-right of the screen and look for "Signed in as" for your ID.
+      placeholder: "example: https://github.ibm.com/allen-dean"
+    validations:
+      required: true
+  - type: input
+    id: gh-id
+    attributes:
+      label: Public GitHub ID
+      description: Enter the person's public GitHub ID. [In GH](https://github.com/), click your profile icon in the upper-right of the screen. Your ID is above your name. Your public GH ID might not be the same as your GitHub Enterprise ID.
+      placeholder: "example: https://github.com/sirspidey"
+    validations:
+      required: true
+  - type: input
+    id: slack-id
+    attributes:
+      label: Slack Name
+      description: |
+        Enter the person's Slack display name.
+
+        1.  From the Slack desktop app, click your profile picture in the sidebar.
+        1.  Select **Profile**.
+        1.  Click the 3-dot **More Actions** icon.
+        1.  Click **Copy display name**.
+      placeholder: "example: @allen.dean"
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: Build admins, see the [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs) tasks.

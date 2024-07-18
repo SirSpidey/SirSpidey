@@ -1,6 +1,6 @@
 name: ✨ 👷 Onboarding request to join IBM Cloud content development
 description: I am new to IBM Cloud docs. Please help me onboard.
-title: "Onboarding request"
+title: "Onboarding request for <name>"
 labels: [Build Request, onboarding]
 assignees:
   - cjcarpen
@@ -62,6 +62,17 @@ body:
       placeholder: "example: @allen.dean"
     validations:
       required: true
-  - type: markdown
+  - type: checkboxes
+    id: update-title
     attributes:
+      label: Update the title
+      description: Help us by updating `<name>` in **Add a title** at the top.
+      options:
+        - label: I updated the person's name in the issue title
+          required: true
+  - type: textarea
+    id: admin-instructions
+    attributes:
+      label: For build admins
+      description: "Additional info for build admins."
       value: Build admins, see the [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs) tasks.

@@ -18,7 +18,6 @@ body:
         Use this template to provide us with the information to get you access.
 
         For more information about getting access and the tools, see [Getting started](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-get-started-onboarding) in the writers guide.
-  - type: input
 
 # Contact info
   - type: markdown

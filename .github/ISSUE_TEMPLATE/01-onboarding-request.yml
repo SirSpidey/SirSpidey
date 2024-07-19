@@ -22,11 +22,11 @@ body:
       value: "## Provide your IDs"
   - type: markdown
     attributes:
-      value: Provide the email address, GitHub, GitHub Enterprise, and Slack information for the person who we're onboarding.
+      value: Provide the email address, GitHub, GitHub Enterprise, and Slack information for the person we're onboarding.
   - type: input
     id: email
     attributes:
-      label: IBM email address
+      label: IBM Email Address
     validations:
       required: true
   - type: input
@@ -62,7 +62,7 @@ body:
   - type: checkboxes
     id: update-title
     attributes:
-      label: Update the title
+      label: Update the Issue Title
       description: Help us by updating `<name>` in **Add a title** at the top.
       options:
         - label: I updated the person's name in the issue title
@@ -70,6 +70,5 @@ body:
   - type: textarea
     id: admin-instructions
     attributes:
-      label: For build admins
-      description: "Additional info for build admins."
-      value: Build admins, see the [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs) tasks.
+      label: For build admins only
+      value: For build admins. Follow steps in [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs) tasks.

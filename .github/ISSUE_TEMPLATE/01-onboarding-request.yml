@@ -81,16 +81,16 @@ body:
     id: other-info
     attributes:
       label: Anything else?
-      description: If you have more information you think we need, you can add it here.
+      description: If you have more information you think we need, add it here.
     validations:
       required: false
 
 # Stuff for build admins
   - type: markdown
     attributes:
-      value: "## For Build Admins."
+      value: "## For Build Admins"
   - type: textarea
     id: admin-instructions
     attributes:
-      label: For build admins only
+      label: Information for Build Admins
       value: For build admins. Follow steps in [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs) tasks.

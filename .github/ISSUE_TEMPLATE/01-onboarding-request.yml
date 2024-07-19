@@ -10,7 +10,7 @@ projects:
 body:
   - type: markdown
     attributes:
-      value: Welcome to IBM Cloud docs content development. Use this template to provide us with the information to get you access. For more information about getting access and the tools, see [Getting started](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-get-started-onboarding) in the writers guide.
+      value: "Welcome to IBM Cloud docs content development. Use this template to provide us with the information to get you access. For more information about getting access and the tools, see [Getting started](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-get-started-onboarding) in the writers guide."
 
 # Contact info
   - type: markdown

@@ -59,6 +59,9 @@ body:
       placeholder: "example: @allen.dean"
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: "## Additional information"
   - type: textarea
     id: other-info
     attributes:

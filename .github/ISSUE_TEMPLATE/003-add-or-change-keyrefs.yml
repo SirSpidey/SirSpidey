@@ -18,12 +18,22 @@ body:
 # Keyref and product details
   - type: markdown
     attributes:
-      value: "## The keyref and product changes"
+      value: "## The changes"
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: New or changed keyrefs?
+      description: Is this a change to a product name or a new keyref?
+      multiple: false
+      options:
+        - New keyref
+        - Product name change
   - type: markdown
     attributes:
       value: |
-        Provide the keyref "keys" and product name "values" that are changing.
-        - If this is a product name change, list both the old and new names along with the keyref key.
+        Provide your keyref details:
+        - If this is a new keyref, provide the keyrefs and product names.
+        - If this is a product name change, list both the old and new names along with the keyref.
         - Include a keyref for the long name with appropriate trademarks (`_full`), a keyref without the trademarks (`_notm`), and a keyref for your approved product short names (`_short`).
         - The keys must be different from the ones in [cloudoekeyrefs.yml](https://github.ibm.com/cloud-doc-build/markdown/blob/master/cloudoekeyrefs.yml).
   - type: textarea
@@ -89,42 +99,20 @@ body:
   - type: checkboxes
     id: searched-uses
     attributes:
-      label: Searched
+      label: Searched for uses of my existing keyref
       options:
         - label: I searched for my keyrefs across Cloud docs
           required: false
   - type: markdown
     attributes:
-      value: At least a week before the change goes live, post about the change in the [#docs](https://ibm.enterprise.slack.com/archives/C03UVUZFK) channel so that teams know the target date of the change and have time to update their docs. Return to this issue and include information about the post
   - type: checkboxes
     id: announce-change-pre
     attributes:
       label: Post about the change before it goes live
+      description: At least a week before the change goes live, post about the change in the [#docs](https://ibm.enterprise.slack.com/archives/C03UVUZFK) channel so that teams know the target date of the change and have time to update their docs. Return to this issue and include information about the post
       options:
-        - label: I posted about the change ahead of time
+        - label: "I already posted in #docs about the change"
           required: false
-  - type: input
-    id: announce-change-pre-url
-    attributes:
-      label: Link to your Slack post
-      description: |
-        1.  From the Slack desktop app, hover over the message.
-        1.  Click the 3-dot **More Actions** icon.
-        1.  Click **Copy link**.
-      placeholder: https://ibm-cloudplatform.slack.com/archives/C03UVUZFK/p1711147227154869
-
-# Post-change details
-  - type: markdown
-    attributes:
-      value: "## After the change goes live"
-  - type: textarea
-    id: announce-change-post
-    attributes:
-      label: Post again after the change goes live
-      description: After the change is live, post details again in the `#docs` channel to let teams know that the change was made.
-      value: "- [ ] I posted information in the `#docs` channel that the keyref is changed."
-    validations:
-      required: false
 
 # Closing section
   - type: textarea
@@ -142,6 +130,19 @@ body:
       options:
         - label: I updated the title
           required: true
+
+# Post-change details
+  - type: markdown
+    attributes:
+      value: "## After the change goes live"
+  - type: textarea
+    id: announce-change-post
+    attributes:
+      label: Post again after the change goes live
+      description: After the change is live, post details again in the `#docs` channel to let teams know that the change was made.
+      value: "- [ ] I posted information in the `#docs` channel that the keyref is changed."
+    validations:
+      required: false
 
 # Stuff for build admins
   - type: markdown

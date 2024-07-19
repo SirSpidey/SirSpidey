@@ -1,6 +1,6 @@
 name: ♻️ 🚚 Add or change your product name keyref
 description: The official short name and full name of your product in cloudoekeyrefs.yml.
-title: "New or changed keyref for <product>"
+title: "New or changed keyref for <my product>"
 labels: [Build Request, keyref, terminology]
 assignees:
   - cjcarpen
@@ -16,9 +16,35 @@ body:
         For more information about key references (keyrefs) in IBM Cloud, see [Using keyrefs for product names](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-keyrefs) in the writers guide.
 
 # Needed by
+  - type: input
+    id: date-requested
+    attributes:
+      label: Go-live date
+      description: Provide the date when you want the change to go live. You must get approvals here before the change will be made.
+    validations:
+      required: true
+
+# Approver information
   - type: markdown
     attributes:
-      value: Provide the date when you want the change to go live. You must get approvals here before the change will be made.
+      value: "## Approver information"
+  - type: markdown
+    attributes:
+      value: |
+        Provide the approvers for this request. Mention them by typing `@` plus their GitHub Enterprise username.
+
+        Include at least 1 technical lead and 1 business lead. Your business lead is often your product manager.
+  - type: textarea
+    id: approvers
+    attributes:
+      label: Approvers
+      value: |
+        - Technical lead: @ID
+        - Business lead: @ID
+
+        Please approve this name change in IBM Cloud docs.
+    validations:
+      required: true
 
 # Changed keyref
   - type: markdown
@@ -41,17 +67,17 @@ body:
       label: Searched
       options:
         - label: I searched for my keyrefs across Cloud docs
-          required: true
+          required: false
   - type: markdown
     attributes:
-      value: At least a week before the change goes live, post about the change in the `#docs` channel so that teams know the target date of the change and have time to update their docs.
+      value: At least a week before the change goes live, post about the change in the [#docs](https://ibm.enterprise.slack.com/archives/C03UVUZFK) channel so that teams know the target date of the change and have time to update their docs.
   - type: checkboxes
     id: announce-change-pre
     attributes:
       label: Post about the change before it goes live
       options:
         - label: I posted about the change ahead of time
-          required: true
+          required: false
   - type: input
     id: announce-change-pre-url
     attributes:
@@ -61,39 +87,6 @@ body:
         1.  Click the 3-dot **More Actions** icon.
         1.  Click **Copy link**.
       placeholder: https://ibm-cloudplatform.slack.com/archives/C03UVUZFK/p1711147227154869
-
-# Approver information
-  - type: markdown
-    attributes:
-      value: "## Approver information"
-  - type: markdown
-    attributes:
-      value: |
-
-        Provide a list of approvers. Mention them by typing `@` plus their GitHub Enterprise username. Include at least 1 technical lead and 1 business lead.
-  - type: input
-    id: tech-approver
-    attributes:
-      label: Technical lead
-      placeholder: <@ID> please approve this name change in IBM Cloud docs.
-    validations:
-      required: true
-  - type: input
-    id: biz-approver
-    attributes:
-      label: Business lead
-      description: Usually your product manager
-      placeholder: <@ID> please approve this name change in IBM Cloud docs.
-    validations:
-      required: true
-  - type: textarea
-    id: other-approvers
-    attributes:
-      label: Other approvers
-      description: Include others who need to approve this change.
-      placeholder:  <@ID>
-    validations:
-      required: false
 
 # Post-change details
   - type: markdown
@@ -107,6 +100,23 @@ body:
       value: "- [ ] I posted information in the `#docs` channel that the keyref is changed."
     validations:
       required: false
+
+# Closing section
+  - type: textarea
+    id: other-info
+    attributes:
+      label: Anything else?
+      description: Feel free to include other information that you think we need to know about your keyref change.
+    validations:
+      required: false
+  - type: checkboxes
+    id: update-title
+    attributes:
+      label: Update the title
+      description: Make sure you update `<my product>` in **Add a title** at the top.
+      options:
+        - label: I updated the title
+          required: true
 
 # Stuff for build admins
   - type: markdown

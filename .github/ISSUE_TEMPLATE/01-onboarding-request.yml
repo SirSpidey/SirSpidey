@@ -63,7 +63,7 @@ body:
     id: update-title
     attributes:
       label: Update the Issue Title
-      description: Help us by updating `<name>` in **Add a title** at the top.
+      description: Replace `<name>` in **Add a title** at the top of this form.
       options:
         - label: I updated the person's name in the issue title
           required: true

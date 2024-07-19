@@ -19,7 +19,7 @@ body:
 # Contact info
   - type: markdown
     attributes:
-      value: "## Provide your IDs"
+      value: "## Provide Your IDs"
   - type: markdown
     attributes:
       value: Provide the email address, GitHub, GitHub Enterprise, and Slack information for the person we're onboarding.
@@ -59,6 +59,11 @@ body:
       placeholder: "example: @allen.dean"
     validations:
       required: true
+  - type: textarea
+    id: other-info
+    attributes:
+      label: Anything else?
+      description: If you have more information you think we need, you can add it here.
   - type: checkboxes
     id: update-title
     attributes:

@@ -5,9 +5,20 @@ labels: [Build Request, onboarding]
 assignees:
   - cjcarpen
   - SirSpidey
+  - Kent-Hall
+  - mtompki
 projects:
   - SirSpidey/1
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Welcome to IBM Cloud docs content development.
+
+        Use this template to provide us with the information to get you access.
+
+        For more information about getting access and the tools, see [Getting started](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-get-started-onboarding) in the writers guide.
+
 # Contact info
   - type: markdown
     attributes:
@@ -18,7 +29,7 @@ body:
   - type: input
     id: email
     attributes:
-      label: IBM Email Address
+      label: IBM email address
     validations:
       required: true
   - type: input
@@ -51,26 +62,17 @@ body:
       placeholder: "example: @allen.dean"
     validations:
       required: true
-  - type: textarea
-    id: other-info
-    attributes:
-      label: Anything else
-      description: If you have more information you think we need, you can add it here.
-    validations:
-      required: false
   - type: checkboxes
     id: update-title
     attributes:
-      label: Update the Title
-      description: Update the `<name>` in **Add a title** at the top of this form.
+      label: Update the title
+      description: Help us by updating `<name>` in **Add a title** at the top.
       options:
         - label: I updated the person's name in the issue title
           required: true
-
-# For build admins
   - type: textarea
     id: admin-instructions
     attributes:
-      label: For build admins only
-      description: ""
-      value: For build admins. Follow steps in [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs) tasks.
+      label: For build admins
+      description: "Additional info for build admins."
+      value: Build admins, see the [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs) tasks.

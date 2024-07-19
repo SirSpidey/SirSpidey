@@ -59,6 +59,21 @@ body:
       placeholder: "example: @allen.dean"
     validations:
       required: true
+
+# Request for update to title
+  - type: markdown
+    attributes:
+      value: "## Update the Issue Title"
+  - type: checkboxes
+    id: update-title
+    attributes:
+      label: Update the Issue Title
+      description: Replace `<name>` in **Add a title** at the top of this form.
+      options:
+        - label: I updated the person's name in the issue title
+          required: true
+
+# Additional info
   - type: markdown
     attributes:
       value: "## Additional information"
@@ -76,13 +91,3 @@ body:
     attributes:
       label: For build admins only
       value: For build admins. Follow steps in [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs) tasks.
-
-# Request for update to title
-  - type: checkboxes
-    id: update-title
-    attributes:
-      label: Update the Issue Title
-      description: Replace `<name>` in **Add a title** at the top of this form.
-      options:
-        - label: I updated the person's name in the issue title
-          required: true

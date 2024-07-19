@@ -93,4 +93,4 @@ body:
     id: admin-instructions
     attributes:
       label: Information for build admins
-      value: For build admins. Follow steps in [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs) tasks.
+      value: For build admins. Follow steps in [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs).

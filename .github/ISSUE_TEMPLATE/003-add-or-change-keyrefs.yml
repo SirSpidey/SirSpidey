@@ -103,8 +103,6 @@ body:
       options:
         - label: I searched for my keyrefs across Cloud docs
           required: false
-  - type: markdown
-    attributes:
   - type: checkboxes
     id: announce-change-pre
     attributes:

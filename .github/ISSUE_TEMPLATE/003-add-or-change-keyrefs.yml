@@ -22,13 +22,14 @@ body:
   - type: markdown
     attributes:
       value: |
-        Include a keyref for the long name with appropriate trademarks (`_full``), a keyref without the trademarks (`_notm`), and a keyref for your approved product short names (`_short`). The keys must be different from the ones in [cloudoekeyrefs.yml](https://github.ibm.com/cloud-doc-build/markdown/blob/master/cloudoekeyrefs.yml).
+        Provide the keyref "keys" and product name "values" that are changing.
+        - If this is a product name change, list both the old and new names along with the keyref key.
+        - Include a keyref for the long name with appropriate trademarks (`_full`), a keyref without the trademarks (`_notm`), and a keyref for your approved product short names (`_short`).
+        - The keys must be different from the ones in [cloudoekeyrefs.yml](https://github.ibm.com/cloud-doc-build/markdown/blob/master/cloudoekeyrefs.yml).
   - type: textarea
     id: keyref-details
     attributes:
-      label: You keyrefs and product names
-      description: |
-        Provide the keyref "keys" and product name "values" that are changing. If this is a product name change, list both the old and new names along with the keyref key.
+      label: Your keyrefs and product names
       value: |
         Examples
 
@@ -38,6 +39,7 @@ body:
           IBM watsonx Code Assistant for Enterprise Java Applications
         wcaej_short:
           watsonx Code Assistant for Enterprise Java Applications
+      render: yaml
 
 # Needed by
   - type: input

@@ -67,6 +67,17 @@ body:
     attributes:
       label: Anything else?
       description: If you have more information you think we need, you can add it here.
+    validations:
+      required: false
+
+# Stuff for build admins
+  - type: textarea
+    id: admin-instructions
+    attributes:
+      label: For build admins only
+      value: For build admins. Follow steps in [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs) tasks.
+
+# Request for update to title
   - type: checkboxes
     id: update-title
     attributes:
@@ -75,8 +86,3 @@ body:
       options:
         - label: I updated the person's name in the issue title
           required: true
-  - type: textarea
-    id: admin-instructions
-    attributes:
-      label: For build admins only
-      value: For build admins. Follow steps in [Onboarding new writers to IBM Cloud docs](https://github.ibm.com/cloud-doc-build/docs-build/wiki/Onboarding-new-writers-to-IBM-Cloud-docs) tasks.

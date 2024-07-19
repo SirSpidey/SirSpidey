@@ -30,9 +30,8 @@ body:
     id: keyref-details
     attributes:
       label: Your keyrefs and product names
+      description: Update these key and product name examples with your information.
       value: |
-        Examples
-
         wcaej_full:
           IBM&reg; watsonx&trade; Code Assistant for Enterprise Java Applications
         wcaej_full_notm:

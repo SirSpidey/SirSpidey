@@ -4,7 +4,9 @@ title: "Build request: New subcollection for <my service>"
 labels: [Build Request]
 assignees:
   - cjcarpen
-  - SirSpidey
+  - allen-dean
+  - Kent-Hall
+  - mtompki
 projects:
   - SirSpidey/1
 body:
@@ -77,7 +79,7 @@ body:
     id: sf-url-ux025
     attributes:
       label: Link to your UX025 issue
-      description: Your SF issue that tracks the requirement to create documentation.
+      description: Your Service Framework issue that tracks the requirement to create documentation.
       placeholder: https://github.ibm.com/Service-Framework/
     validations:
       required: false
@@ -85,7 +87,7 @@ body:
     id: sf-url-ux033
     attributes:
       label: Link to your UX033 issue
-      description: Your SF issue that tracks the requirement to review your content experience plans.
+      description: Your Service Framework issue that tracks the requirement to review your content experience plans.
       placeholder: https://github.ibm.com/Service-Framework/
     validations:
       required: false
@@ -141,7 +143,7 @@ body:
   - type: input
     id: slack-id
     attributes:
-      label: Slack Name
+      label: Slack name
       description: |
         Enter the person's Slack display name.
 
@@ -169,6 +171,13 @@ body:
       options:
         - label: I updated the title
           required: true
+
+# Stuff for build admins
   - type: markdown
     attributes:
-      value: Build admins, see the [IBM Cloud Docs Build](https://github.ibm.com/cloud-doc-build/docs-build/wiki/IBM-Cloud-Docs-Build) tasks.
+      value: "## For build admins"
+  - type: textarea
+    id: admin-instructions
+    attributes:
+      label: Information for build admins
+      value: For build admins. Follow steps in [IBM Cloud Docs Build](https://github.ibm.com/cloud-doc-build/docs-build/wiki/IBM-Cloud-Docs-Build).

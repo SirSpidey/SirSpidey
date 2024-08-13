@@ -18,6 +18,10 @@ body:
             - If you can't log in to your account, start a chat by going to the [IBM Cloud Support](https://www.ibm.com/cloud/support) page and clicking **Let's talk**.
 
 # The issue details
+# The issue details
+  - type: markdown
+    attributes:
+      value: "## Request details"
   - type: textarea
     attributes:
       label: Which topic are you reporting about?

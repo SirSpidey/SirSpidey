@@ -5,13 +5,14 @@ body:
   - type: markdown
     attributes:
       value: |
-        :information_source: **Tip:** IBMers, don't use this repo to report issues. View the topic in IBM Cloud staging and open a doc issue from there.
+        :information_source: **Tip:** IBMers, don't use this repo to report issues. View the topic in the internal IBM Cloud docs staging site and open a doc issue from there.
 
 # The issue details
   - type: textarea
     attributes:
       label: Which topic on are you reporting about?
       description: Please link to the topic that you think needs an update.
+      placeholder: https://cloud.ibm.com/docs/ ...
     validations:
       required: true
 

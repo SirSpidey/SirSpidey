@@ -9,9 +9,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to contribute to the IBM Cloud docs.
+        **IBMers**, don't use this repo to report issues. View the topic in the internal IBM Cloud docs staging site and open a doc issue from there.
 
-        :information_source: **Tip:** IBMers, don't use this repo to report issues. View the topic in the internal IBM Cloud docs staging site and open a doc issue from there.
+        Thanks for taking the time to contribute to the IBM Cloud docs.
 
         If your comments are about an IBM Cloud product, create an issue instead at IBM Cloud Support. Here's how:
         - If you're logged in to IBM Cloud, go directly to the [Support center](https://cloud.ibm.com/unifiedsupport/supportcenter) to review your product topics and featured FAQs, open or manage a support case, or search community content.

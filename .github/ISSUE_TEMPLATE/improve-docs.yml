@@ -9,7 +9,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **IBMers**, don't use this repo to report issues. View the topic in the internal IBM Cloud docs staging site and open a doc issue from there.
+        ***IBMers**, don't use this repo to report issues. View the topic in the internal IBM Cloud docs staging site and open a doc issue from there.*
 
         Thanks for taking the time to contribute to the IBM Cloud docs.
 
@@ -34,7 +34,7 @@ body:
     attributes:
       label: What do you think needs to be updated?
       description: |
-        - Is something wrong or unclear? Provide information about what you see versus what you expect to see.
+        - Is something wrong or unclear? Provide information about what you see and what you *expect* to see.
         - Is something missing? Provide as much detail as you can to help us understand the change that you want to see.
     validations:
       required: true

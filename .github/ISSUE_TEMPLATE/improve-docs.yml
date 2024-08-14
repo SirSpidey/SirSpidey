@@ -17,10 +17,9 @@ body:
       value: |
         Thanks for taking the time to contribute to the IBM Cloud docs.
 
-        > [!TIP]
-        > If your comments are about a technical issue with an IBM Cloud product, create an issue instead at IBM Cloud Support or one of the communities. Here's how:
-        > - If you're logged in to IBM Cloud, go directly to the [Support center](https://cloud.ibm.com/unifiedsupport/supportcenter) to review your product topics and featured FAQs, open or manage a support case, or search community content.
-        > - If you can't log in, go to the [IBM Cloud Support](https://www.ibm.com/cloud/support) page and review the no-charge support community options.
+        If your comments are about a technical issue with an IBM Cloud product, create an issue instead at IBM Cloud Support or one of the communities. Here's how:
+        - If you're logged in to IBM Cloud, go directly to the [Support center](https://cloud.ibm.com/unifiedsupport/supportcenter) to review your product topics and featured FAQs, open or manage a support case, or search community content.
+        - If you can't log in, go to the [IBM Cloud Support](https://www.ibm.com/cloud/support) page and review the no-charge support community options.
 
 # The issue details
   - type: markdown

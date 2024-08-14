@@ -1,11 +1,5 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
   - name: IBM Cloud Support
     url: https://www.ibm.com/cloud/support
     about: Get the help you need from IBM Cloud.
-  - name: cloud-doc-builds Slack channel
-    url: https://ibm.enterprise.slack.com/archives/C3P5VAKHR
-    about: Join the discussions in Slack.
-  - name: Basic build troubleshooting
-    url: https://test.cloud.ibm.com/docs-internal/writing?topic=writing-release-notes
-    about: Before you open a build issue, review this checklist for common troubleshooting tips.

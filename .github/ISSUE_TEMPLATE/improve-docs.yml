@@ -24,7 +24,7 @@ body:
 # The issue details
   - type: markdown
     attributes:
-      value: "## Request details"
+      value: "## Documentation details"
   - type: textarea
     attributes:
       label: Which topic are you reporting about?

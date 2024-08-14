@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to contribute to the IBM Cloud docs.
+        Thanks for taking the time to contribute to the IBM Cloud docs!
 
         > [!IMPORTANT]
         > **IBMers**, *don't use this repo to report issues. View the topic in the internal IBM Cloud docs staging site and open a doc issue from there.*

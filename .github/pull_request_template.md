@@ -16,7 +16,7 @@ After you open your pull request, a maintainer should review it soon. We don't m
 
 ---
 
-### Checklist for docs team
+### For reviewers (This section is only for IBMers)
 
 You can't merge pull requests here.
 

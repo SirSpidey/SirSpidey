@@ -13,7 +13,7 @@ body:
 
   - type: markdown
     attributes:
-      value: "## About IBM Cloud products"
+      value: "## Commenting about IBM Cloud products?"
   - type: markdown
     attributes:
       value: |

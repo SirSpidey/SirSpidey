@@ -1,6 +1,6 @@
-Thanks for taking the time to contribute to the IBM Cloud docs!
+Thanks for taking the time to contribute to the IBM Cloud docs! After you open your pull request, a maintainer should review it soon.
 
-After you open your pull request, a maintainer should review it soon. We don't merge changes in this repository because content is not published from here. However, if we can use the changes that you suggest here, we publish them from our internal repository.
+We don't merge changes in this repository because content is not published from here. However, if we can use the changes that you suggest here, we publish them from our internal repository.
 
 ### What does this pull request do?
 

@@ -1,0 +1,155 @@
+name: ✨ 👷 Video upload request - internal
+description: Request to upload a video to internal-only IBM Cloud TV
+title: "Upload request for <your video> (internal)"
+labels: [internal]
+assignees:
+  - cjcarpen
+body:
+
+# Is the video eligible?
+  - type: markdown
+    attributes:
+      value: "## Eligibility"
+  - type: markdown
+    attributes:
+      value: Confirm that your video fulfills the following criteria
+  - type: checkboxes
+    id: is-related-subject
+    attributes:
+      label: Subject
+      options:
+        - label: My video is about IBM Cloud platform, services, software, tooling, or other related subject
+          required: true
+  - type: checkboxes
+    id: is-correct-resolution
+    attributes:
+      label: Resolution
+      options:
+        - label: The resolution is is 1920 x 1080 (1080p) or higher
+          required: true
+  - type: checkboxes
+    id: is-correct-size
+    attributes:
+      label: File size
+      options:
+        - label: The size of the video file is 4 GB or less
+          required: false
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      description: Select the format of your video. Only these formats are supported.
+      multiple: false
+      options:
+        - .mp4
+        - .mov
+        - .mkv
+        - .flv
+        - .avi
+        - .wmv
+        - .mpeg2
+    validations:
+      required: true
+
+# Video details
+  - type: markdown
+    attributes:
+      value: "## Video details"
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: "Provide the title to your video. For example, \"Amplitude 101: Getting started\" or \"Catalog & Catalog Management October 2024 milestone movie: Replatforming as Code\""
+    validations:
+      required: true
+  - type: textarea
+    id: shortdesc
+    attributes:
+      label: Description
+      description: Provide a description that summarizes clearly the video's key goals or messages.
+    validations:
+      required: true
+  - type: textarea
+    id: related-links
+    attributes:
+      label: Related links
+      description: Provide up to 3 links where users can take action or learn more about the video's subject. For example, links to tutorials, docs, product pages.
+      value: |
+        Related link 1:
+        Related link 2:
+        Related link 3:
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: Provide the following information about your video.
+  - type: input
+    id: video-url
+    attributes:
+      label: Location of your video file
+      placeholder: "Example: https://ibm.ent.box.com/file/123453979762"
+    validations:
+      required: true
+  - type: textarea
+    id: thumbnail
+    attributes:
+      label: Custom thumbnail
+      description: Provide the timestamp in the video that you'd like to use as the video's thumbnail. Or upload an image to use as a thumbnail. The image must be a 1920 x 1080 PNG or JPEG.
+      value: |
+        Timestamp:
+        Or upload the thumbnail
+    validations:
+      required: false
+  - type: textarea
+    id: cc-location
+    attributes:
+      label: Closed caption file
+      description: If you created closed caption files in the WebVTT (`.vtt`), SMI (`.smi`, .`sami`) or DFXP (`.dfxp`) format, specify the locations. Watson Media auto-generates captions for videos that don't have caption files.
+      placeholder: URLs of your closed caption files
+  - type: dropdown
+    id: channel
+    attributes:
+      label: Channel
+      description: Select a channel for your video
+      multiple: false
+      options:
+        - "Level up! For educational videos, how-tos, and more."
+        - "Milestone movies: For playbacks of your team's work."
+  - type: dropdown
+    id: in-playlist
+    attributes:
+      label: Playlist
+      description: "Do you want this video included in a playlist?"
+      multiple: false
+      options:
+        - No, this is a one-off and I don't need a playlist
+        - Yes, add to the following playlist
+        - Yes, create the following playlist
+  - type: textarea
+    id: playlist-name
+    attributes:
+      label: Playlist name
+      description: If you want the video in a playlist, enter the playlist name
+      value: |
+        - Existing playlist name:
+        - New playlist name:
+
+# Closing section
+  - type: markdown
+    attributes:
+      value: "## Finishing up"
+  - type: textarea
+    id: other-info
+    attributes:
+      label: Anything else?
+      description: If you have more information you think we need, add it here.
+    validations:
+      required: false
+  - type: checkboxes
+    id: update-title
+    attributes:
+      label: Update the issue title
+      description: Replace `<your video>` in **Add a title** at the top of this form with the name of your video.
+      options:
+        - label: I updated the video name in the issue title
+          required: true

@@ -12,7 +12,7 @@ body:
       value: "## Eligibility"
   - type: markdown
     attributes:
-      value: Confirm that your video fulfills the following criteria
+      value: Confirm that your video meets the following criteria
   - type: checkboxes
     id: is-related-subject
     attributes:
@@ -33,7 +33,7 @@ body:
       label: File size
       options:
         - label: The size of the video file is 4 GB or less
-          required: false
+          required: true
   - type: dropdown
     id: format
     attributes:
@@ -55,6 +55,9 @@ body:
   - type: markdown
     attributes:
       value: "## Video details"
+  - type: markdown
+    attributes:
+      value: Provide the following information about your video.
   - type: input
     id: title
     attributes:
@@ -69,6 +72,13 @@ body:
       description: Provide a description that summarizes clearly the video's key goals or messages.
     validations:
       required: true
+  - type: input
+    id: video-url
+    attributes:
+      label: Location of your video file
+      placeholder: "Example: https://ibm.ent.box.com/file/123453979762"
+    validations:
+      required: true
   - type: textarea
     id: related-links
     attributes:
@@ -80,16 +90,6 @@ body:
         Related link 3:
     validations:
       required: false
-  - type: markdown
-    attributes:
-      value: Provide the following information about your video.
-  - type: input
-    id: video-url
-    attributes:
-      label: Location of your video file
-      placeholder: "Example: https://ibm.ent.box.com/file/123453979762"
-    validations:
-      required: true
   - type: textarea
     id: thumbnail
     attributes:
@@ -110,11 +110,13 @@ body:
     id: channel
     attributes:
       label: Channel
-      description: Select a channel for your video
+      description: Select a channel for your video. Select **Level up!** for educational videos, how-tos, and more. Select **Milestone movies** for playbacks of your team's work.
       multiple: false
       options:
-        - "Level up! For educational videos, how-tos, and more."
-        - "Milestone movies: For playbacks of your team's work."
+        - "Level up!"
+        - "Milestone movies"
+    validations:
+      required: true
   - type: dropdown
     id: in-playlist
     attributes:
@@ -122,16 +124,19 @@ body:
       description: "Do you want this video included in a playlist?"
       multiple: false
       options:
-        - No, this is a one-off and I don't need a playlist
+        - No, this is a one-off and doesn't need a playlist
         - Yes, add to the following playlist
         - Yes, create the following playlist
+    validations:
+      required: true
   - type: textarea
     id: playlist-name
     attributes:
       label: Playlist name
-      description: If you want the video in a playlist, enter the playlist name
+      description: If you selected **Yes** for a playlist, enter the new or existing playlist name.
       value: |
         - Existing playlist name:
+        or
         - New playlist name:
 
 # Closing section

@@ -5,6 +5,12 @@ labels: [internal]
 assignees:
   - cjcarpen
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request permission to upload an internal-only video about IBM Cloud to IBM Video Streaming (Watson Media).
+
+        :information_source: **Tip:** If the video is meant for non-IBMers, open a [Video upload request - external](https://github.ibm.com/cloud-content/videos/issues/new/choose) issue instead.
 
 # Is the video eligible?
   - type: markdown
@@ -12,7 +18,7 @@ body:
       value: "## Eligibility"
   - type: markdown
     attributes:
-      value: Confirm that your video meets the following criteria
+      value: Confirm that your video meets the following criteria.
   - type: checkboxes
     id: is-related-subject
     attributes:
@@ -111,14 +117,23 @@ body:
     id: channel
     attributes:
       label: Channel
-      description: Select a channel for your video. Select **Level up!** for educational videos, how-tos, and more. Select **Milestone movies** for playbacks of your team's work.
+      description: Select a channel for your video. Select **Level up!** for educational videos, how-tos, and more. Select **Milestone movies** for playbacks of your team's work. Select **Other** if those channels aren't appropriate and enter the channel name in the following field.
       multiple: false
       options:
         -  Not selected
         - "Level up!"
         - "Milestone movies"
+        - Other channel
     validations:
       required: true
+  - type: input
+    id: channel-other
+    attributes:
+      label: Other channel
+      description: If you selected **Other** for the channel, enter the name of the channel.
+      placeholder: Other channel name
+    validations:
+      required: false
   - type: dropdown
     id: in-playlist
     attributes:
@@ -126,7 +141,7 @@ body:
       description: "Do you want this video included in a playlist?"
       multiple: false
       options:
-        -  Not selected
+        - Not selected
         - No, this is a one-off and doesn't need a playlist
         - Yes, add to the following playlist
         - Yes, create the following playlist
@@ -161,3 +176,14 @@ body:
       options:
         - label: I updated the video name in the issue title
           required: true
+
+# Stuff for build admins
+  - type: markdown
+    attributes:
+      value: "## For build admins"
+  - type: textarea
+    id: admin-instructions
+    attributes:
+      label: Information for build admins
+      description: For build admins only. Do not change this field.
+      value: "Build admins: Follow steps in [Video publishing channels](https://github.ibm.com/cloud-content/videos/wiki)."

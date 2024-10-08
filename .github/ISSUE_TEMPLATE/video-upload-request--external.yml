@@ -1,0 +1,251 @@
+name: ✨ 🎬 Video upload request - external
+description: Request to upload an external video.
+title: "Upload request for <your video>"
+labels: [external]
+assignees:
+  - cjcarpen
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request permission to upload an externally available video about IBM Cloud to the [IBM Cloud platform channel on IBM MediaCenter](https://mediacenter.ibm.com/channel/IBM%2BCloud%2Bplatform/338431352). If yours is a concept or demo video, it can be cross-posted by the team to YouTube.
+
+        For more information about best practices and requirements, see [Creating videos](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-creating-videos) in the content development guide.
+
+        :information_source: **Tip:** If the video is meant only for IBMers, open a [Video upload request - internal](https://github.ibm.com/cloud-content/videos/issues/new/choose) issue instead.
+
+# Is the video eligible?
+  - type: markdown
+    attributes:
+      value: "## Eligibility"
+  - type: markdown
+    attributes:
+      value: Confirm that your video meets the following criteria. The video must meet all the criteria to be hosted by IBM Cloud.
+  - type: checkboxes
+    id: is-related-subject
+    attributes:
+      label: Subject
+      options:
+        - label: The video is about IBM Cloud platform, services, software, tooling, or other related subject
+          required: true
+  - type: checkboxes
+    id: is-not-pii
+    attributes:
+      label: No confidential or PII information
+      options:
+        - label: The video does not contain personal or IBM Confidential information.
+          required: true
+  - type: checkboxes
+    id: is-short
+    attributes:
+      label: Length
+      description: If your video is longer than 5 minutes, divide the video into chapters. You'll provide details about the chapters later.
+      options:
+        - label: The video is less than 5 minutes long.
+          required: true
+  - type: checkboxes
+    id: is-correct-intro-outro
+    attributes:
+      label:
+      description:
+      options:
+        - label: The video uses the IBM Cloud [intro and outro](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-creating-videos#video-content).
+          required: true
+  - type: checkboxes
+    id: is-text-script-available
+    attributes:
+      label: Accessible
+      description: Your video must have text equivalents for users that can't see or hear your video, typically a caption or a transcript.
+      options:
+        - label: A text-equivalent script is available
+          required: true
+  - type: checkboxes
+    id: is-correct-resolution
+    attributes:
+      label: Resolution
+      options:
+        - label: The resolution is is 1920 x 1080 (1080p) or higher and has a 16:9 aspect ratio
+          required: true
+  - type: checkboxes
+    id: is-correct-size
+    attributes:
+      label: File size
+      options:
+        - label: The size of the video file is 4 GB or less
+          required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      description: Select the format of your video. Only these formats are supported.
+      multiple: false
+      options:
+        - not selected
+        - .mp4
+        - .mov
+        - .mkv
+        - .flv
+        - .avi
+        - .wmv
+        - .mpeg2
+    validations:
+      required: true
+  - type: input
+    id: doc-embed-url
+    attributes:
+      label: Doc topic to hold the video
+      description: Specify the URL of the IBM Cloud docs topic that will embed the video
+      placeholder: "https://cloud.ibm.com/docs/..."
+    validations:
+      required: true
+
+# Responsibilities
+  - type: markdown
+    attributes:
+      value: "## Confirm your responsibilities"
+  - type: markdown
+    attributes:
+      value: As the upload requester, you're responsible for making sure that your video is accurate, doesn't contain any IBM Confidential or personal information, and otherwise complies with IBM global data, privacy, and accessibility regulations.
+  - type: checkboxes
+    id: is-content-read
+    attributes:
+      label: Certify understanding
+      options:
+        - label: I reviewed the [MediaCenter Usage & User Responsibilities](https://w3.ibm.com/w3publisher/mediacenter/usage-user-responsibilities/)
+          required: true
+  - type: checkboxes
+    id: is-compliant
+    attributes:
+      label: Certify compliance
+      options:
+        - label: I certify that the video that I am requesting to upload adheres to MediaCenter terms of use and IBM global data, privacy, and accessibility regulation.
+          required: true
+# Video details
+  - type: markdown
+    attributes:
+      value: "## Video details"
+  - type: markdown
+    attributes:
+      value: Provide the following information about your video.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: "Provide the title to your video. For example, \"Amplitude 101: Getting started\" or \"Catalog & Catalog Management October 2024 milestone movie: Replatforming as Code\""
+    validations:
+      required: true
+  - type: textarea
+    id: shortdesc
+    attributes:
+      label: Description
+      description: Provide a description that summarizes clearly the video's key goals or messages.
+    validations:
+      required: true
+  - type: input
+    id: video-url
+    attributes:
+      label: Location of your video file
+      placeholder: "Example: https://ibm.ent.box.com/file/123453979762"
+    validations:
+      required: true
+  - type: textarea
+    id: related-links
+    attributes:
+      label: Related links
+      description: Provide up to 3 links where users can take action or learn more about the video's subject. For example, links to tutorials, docs, product pages.
+      value: |
+        Related link 1:
+        Related link 2:
+        Related link 3:
+    validations:
+      required: false
+  - type: textarea
+    id: thumbnail
+    attributes:
+      label: Custom thumbnail
+      description: Provide the timestamp in the video that you'd like to use as the video's thumbnail. Or upload an image to use as a thumbnail. The image must be a 1920 x 1080 PNG or JPEG.
+      value: |
+        Timestamp:
+        Or upload the thumbnail
+    validations:
+      required: false
+  - type: textarea
+    id: cc-location
+    attributes:
+      label: Closed caption file
+      description: If you created closed caption files in the WebVTT (`.vtt`), SMI (`.smi`, .`sami`) or DFXP (`.dfxp`) format, specify the locations. Watson Media auto-generates captions for videos that don't have caption files.
+      placeholder: URLs of your closed caption files
+  - type: dropdown
+    id: channel
+    attributes:
+      label: Channel
+      description: Select a channel for your video. Select **Level up!** for educational videos, how-tos, and more. Select **Milestone movies** for playbacks of your team's work. Select **Other** if those channels aren't appropriate and enter the channel name in the following field.
+      multiple: false
+      options:
+        -  Not selected
+        - "Level up!"
+        - "Milestone movies"
+        - Other channel
+    validations:
+      required: true
+  - type: input
+    id: channel-other
+    attributes:
+      label: Other channel
+      description: If you selected **Other** for the channel, enter the name of the channel.
+      placeholder: Other channel name
+    validations:
+      required: false
+  - type: dropdown
+    id: in-playlist
+    attributes:
+      label: Playlist
+      description: "Do you want this video included in a playlist?"
+      multiple: false
+      options:
+        - Not selected
+        - No, this is a one-off and doesn't need a playlist
+        - Yes, add to the following playlist
+        - Yes, create the following playlist
+    validations:
+      required: true
+  - type: textarea
+    id: playlist-name
+    attributes:
+      label: Playlist name
+      description: If you selected **Yes** for a playlist, enter the new or existing playlist name.
+      value: |
+        - Existing playlist name:
+        or
+        - New playlist name:
+
+# Closing section
+  - type: markdown
+    attributes:
+      value: "## Finishing up"
+  - type: textarea
+    id: other-info
+    attributes:
+      label: Anything else?
+      description: If you have more information you think we need, add it here.
+    validations:
+      required: false
+  - type: checkboxes
+    id: update-title
+    attributes:
+      label: Update the issue title
+      description: Replace `<your video>` in **Add a title** at the top of this form with the name of your video.
+      options:
+        - label: I updated the video name in the issue title
+          required: true
+
+# Stuff for build admins
+  - type: markdown
+    attributes:
+      value: "## For build admins"
+  - type: textarea
+    id: admin-instructions
+    attributes:
+      label: Information for build admins
+      description: For build admins only. Do not change this field.
+      value: "Build admins: Follow steps in [Video publishing channels](https://github.ibm.com/cloud-content/videos/wiki)."

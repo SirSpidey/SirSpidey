@@ -41,6 +41,7 @@ body:
       description: Select the format of your video. Only these formats are supported.
       multiple: false
       options:
+        - not selected
         - .mp4
         - .mov
         - .mkv
@@ -113,6 +114,7 @@ body:
       description: Select a channel for your video. Select **Level up!** for educational videos, how-tos, and more. Select **Milestone movies** for playbacks of your team's work.
       multiple: false
       options:
+        -  Not selected
         - "Level up!"
         - "Milestone movies"
     validations:
@@ -124,6 +126,7 @@ body:
       description: "Do you want this video included in a playlist?"
       multiple: false
       options:
+        -  Not selected
         - No, this is a one-off and doesn't need a playlist
         - Yes, add to the following playlist
         - Yes, create the following playlist

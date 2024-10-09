@@ -241,46 +241,6 @@ body:
       label: Closed caption file
       description: If you created closed caption files in the WebVTT (`.vtt`), SMI (`.smi`, .`sami`) or DFXP (`.dfxp`) format, specify the locations. Watson Media auto-generates captions for videos that don't have caption files.
       placeholder: URLs of your closed caption files
-  - type: dropdown
-    id: channel
-    attributes:
-      label: Channel
-      description: Select a channel for your video. Select **Level up!** for educational videos, how-tos, and more. Select **Milestone movies** for playbacks of your team's work. Select **Other** if those channels aren't appropriate and enter the channel name in the following field.
-      multiple: false
-      options:
-        - Not selected
-        - "Level up!"
-        - "Milestone movies"
-        - Other channel
-    validations:
-      required: true
-  - type: input
-    id: channel-other
-    attributes:
-      label: Other channel
-      description: If you selected **Other** for the channel, enter the name of the channel.
-      placeholder: Other channel name
-    validations:
-      required: false
-  - type: dropdown
-    id: in-playlist
-    attributes:
-      label: Playlist
-      description: "Do you want this video included in a playlist?"
-      multiple: false
-      options:
-        - Not selected
-        - No, this is a one-off and doesn't need a playlist
-        - Yes, add to the following playlist
-        - Yes, create the following playlist
-    validations:
-      required: true
-  - type: textarea
-    id: playlist-name
-    attributes:
-      label: Playlist name
-      description: If you selected **Yes** for a playlist, enter the new or existing playlist name.
-      value: "Playlist name:"
 
 # Closing section
   - type: markdown

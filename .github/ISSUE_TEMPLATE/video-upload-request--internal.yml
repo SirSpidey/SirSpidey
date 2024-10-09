@@ -24,21 +24,21 @@ body:
     attributes:
       label: Subject
       options:
-        - label: My video is about IBM Cloud platform, services, software, tooling, or other related subject
+        - label: My video is about IBM Cloud platform, services, software, tooling, or other related subject.
           required: true
   - type: checkboxes
     id: is-correct-resolution
     attributes:
       label: Resolution
       options:
-        - label: The resolution is is 1920 x 1080 (1080p) or higher
+        - label: The resolution is is 1920 x 1080 (1080p) or higher.
           required: true
   - type: checkboxes
     id: is-correct-size
     attributes:
       label: File size
       options:
-        - label: The size of the video file is 4 GB or less
+        - label: The size of the video file is 4 GB or less.
           required: true
   - type: dropdown
     id: format
@@ -87,6 +87,16 @@ body:
     validations:
       required: true
   - type: textarea
+    id: thumbnail
+    attributes:
+      label: Custom thumbnail
+      description: Provide the timestamp in the video that you'd like to use as the video's thumbnail. Or upload an image to use as a thumbnail. The image must be a 1920 x 1080 PNG or JPEG.
+      value: |
+        Timestamp:
+        Or upload the thumbnail
+    validations:
+      required: false
+  - type: textarea
     id: related-links
     attributes:
       label: Related links
@@ -95,16 +105,6 @@ body:
         Related link 1:
         Related link 2:
         Related link 3:
-    validations:
-      required: false
-  - type: textarea
-    id: thumbnail
-    attributes:
-      label: Custom thumbnail
-      description: Provide the timestamp in the video that you'd like to use as the video's thumbnail. Or upload an image to use as a thumbnail. The image must be a 1920 x 1080 PNG or JPEG.
-      value: |
-        Timestamp:
-        Or upload the thumbnail
     validations:
       required: false
   - type: textarea
@@ -120,7 +120,7 @@ body:
       description: Select a channel for your video. Select **Level up!** for educational videos, how-tos, and more. Select **Milestone movies** for playbacks of your team's work. Select **Other** if those channels aren't appropriate and enter the channel name in the following field.
       multiple: false
       options:
-        -  Not selected
+        - Not selected
         - "Level up!"
         - "Milestone movies"
         - Other channel
@@ -147,15 +147,13 @@ body:
         - Yes, create the following playlist
     validations:
       required: true
-  - type: textarea
+  - type: input
     id: playlist-name
     attributes:
       label: Playlist name
       description: If you selected **Yes** for a playlist, enter the new or existing playlist name.
-      value: |
-        - Existing playlist name:
-        or
-        - New playlist name:
+    validations:
+      required: false
 
 # Closing section
   - type: markdown
@@ -174,7 +172,7 @@ body:
       label: Update the issue title
       description: Replace `<your video>` in **Add a title** at the top of this form with the name of your video.
       options:
-        - label: I updated the video name in the issue title
+        - label: I updated the video name in the issue title.
           required: true
 
 # Stuff for build admins

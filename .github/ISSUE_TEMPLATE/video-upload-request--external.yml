@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use this template to request permission to upload an externally available video about IBM Cloud to the [IBM Cloud platform channel on IBM MediaCenter](https://mediacenter.ibm.com/channel/IBM%2BCloud%2Bplatform/338431352). If yours is a concept or demo video, it can be cross-posted by the team to YouTube. For more information about best practices and requirements, see [Creating videos](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-creating-videos) in the content development guide.
+        Use this template to request permission to upload an externally available video about IBM Cloud to the [IBM Cloud platform channel on IBM MediaCenter](https://mediacenter.ibm.com/channel/IBM%2BCloud%2Bplatform/338431352). For more information about best practices and requirements, see [Creating videos](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-creating-videos) in the content development guide.
 
         :information_source: **Tip:** If the video is meant only for IBMers, open a [Video upload request - internal](https://github.ibm.com/cloud-content/videos/issues/new/choose) issue instead.
 
@@ -24,7 +24,7 @@ body:
     attributes:
       label: Subject
       options:
-        - label: The video is about IBM Cloud platform, services, software, tooling, or other related subject
+        - label: The video is about IBM Cloud platform, services, software, tooling, or other related subject.
           required: true
   - type: checkboxes
     id: is-not-pii
@@ -33,14 +33,16 @@ body:
       options:
         - label: The video does not contain personal or IBM Confidential information.
           required: true
-  - type: checkboxes
-    id: is-short
+  - type: dropdown
+    id: length
     attributes:
       label: Length
       description: If your video is longer than 5 minutes, divide the video into chapters. You'll provide details about the chapters later.
       options:
-        - label: The video is less than 5 minutes long.
-          required: true
+        - The video is less than 5 minutes long
+        - The video is divided into chapters less than 5 minutes long
+    validations:
+      required: true
   - type: checkboxes
     id: is-correct-intro-outro
     attributes:
@@ -52,9 +54,9 @@ body:
     id: is-text-script-available
     attributes:
       label: Accessible
-      description: Your video must have text equivalents for users that can't see or hear your video, typically a caption or a transcript.
+      description: Your video must have text equivalents for users that can't see or hear your video, typically a caption or a transcript. You'll provide details about the script later.
       options:
-        - label: A text-equivalent script is available
+        - label: A text-equivalent script is available.
           required: true
   - type: checkboxes
     id: is-correct-resolution
@@ -68,7 +70,7 @@ body:
     attributes:
       label: File size
       options:
-        - label: The size of the video file is 4 GB or less
+        - label: The size of each video file is 4 GB or less.
           required: true
   - type: dropdown
     id: format
@@ -87,14 +89,6 @@ body:
         - .mpeg2
     validations:
       required: true
-  - type: input
-    id: doc-embed-url
-    attributes:
-      label: Doc topic to hold the video
-      description: Specify the URL of the IBM Cloud docs topic that will embed the video
-      placeholder: "https://cloud.ibm.com/docs/..."
-    validations:
-      required: true
 
 # Responsibilities
   - type: markdown
@@ -108,7 +102,7 @@ body:
     attributes:
       label: Certify understanding
       options:
-        - label: I reviewed the [MediaCenter Usage & User Responsibilities](https://w3.ibm.com/w3publisher/mediacenter/usage-user-responsibilities/)
+        - label: I reviewed the [MediaCenter Usage & User Responsibilities](https://w3.ibm.com/w3publisher/mediacenter/usage-user-responsibilities/).
           required: true
   - type: checkboxes
     id: is-compliant
@@ -136,29 +130,12 @@ body:
       description: The email address of the person to contact about the video.
     validations:
       required: true
-  - type: input
-    id: slack-id
-    attributes:
-      label: "Docs owner: Slack name"
-      description: |
-        Enter the person's Slack display name.
-
-        1.  From the Slack desktop app, click your profile picture in the sidebar.
-        1.  Select **Profile**.
-        1.  Click the 3-dot **More Actions** icon.
-        1.  Click **Copy display name**.
-      placeholder: "Example: @allen.dean"
-    validations:
-      required: true
   - type: textarea
     id: talent-contact
     attributes:
       label: Talent contact information
       description: If your video includes recordings of people, including narration and on-camera visuals, the people who appear in the video must complete a talent consent form. Specify the names and emails of everyone who appears in the video (including yourself, if applicable). We'll send a form via email to each person. The person must return the signed form before we will upload the video.
       value: |
-        Name:
-        Email:
-
         Name:
         Email:
     validations:
@@ -189,8 +166,10 @@ body:
     id: video-type
     attributes:
       label: Video type
+      description: If your type of video is concept or demo, it will be cross-posted by the team to YouTube.
       multiple: false
       options:
+        - Not selected
         - Concept
         - Demo
         - How-to
@@ -213,12 +192,20 @@ body:
       placeholder: "Example: https://ibm.ent.box.com/file/123453979762"
     validations:
       required: true
+  - type: input
+    id: doc-embed-url
+    attributes:
+      label: Doc topic to hold the video
+      description: Specify the URL of the IBM Cloud docs topic that will embed the video
+      placeholder: "https://cloud.ibm.com/docs/..."
+    validations:
+      required: true
   - type: textarea
     id: chapter-timestamps
     attributes:
       label: Chapter timestamps
       description: "If your video is longer than 5 minutes, divide it into chapters of less than 5 minutes. Provide the timestamps for each chapter along with the label for each section."
-      placeholder: "0:35: Deploy your app"
+      placeholder: "1. 0:35: Deploy your app"
     validations:
       required: false
   - type: input
@@ -228,6 +215,16 @@ body:
       description: Include a link to the script for your video. The script must be included in the same topic of your documentation where you embed the video unless the topic covers the content in the video word-for-word. For more information, see [Making your video accessible](https://test.cloud.ibm.com/docs/writing?topic=writing-creating-videos#video-accessibility).
       placeholder: https://cloud.ibm.com/docs/...
   - type: textarea
+    id: thumbnail
+    attributes:
+      label: Custom thumbnail
+      description: Provide the timestamp in the video that you'd like to use as the video's thumbnail. Or upload an image to use as a thumbnail. The image must be a 1920 x 1080 PNG or JPEG.
+      value: |
+        Timestamp:
+        Or upload the thumbnail
+    validations:
+      required: false
+  - type: textarea
     id: related-links
     attributes:
       label: Related links
@@ -236,16 +233,6 @@ body:
         Related link 1:
         Related link 2:
         Related link 3:
-    validations:
-      required: false
-  - type: textarea
-    id: thumbnail
-    attributes:
-      label: Custom thumbnail
-      description: Provide the timestamp in the video that you'd like to use as the video's thumbnail. Or upload an image to use as a thumbnail. The image must be a 1920 x 1080 PNG or JPEG.
-      value: |
-        Timestamp:
-        Or upload the thumbnail
     validations:
       required: false
   - type: textarea
@@ -261,7 +248,7 @@ body:
       description: Select a channel for your video. Select **Level up!** for educational videos, how-tos, and more. Select **Milestone movies** for playbacks of your team's work. Select **Other** if those channels aren't appropriate and enter the channel name in the following field.
       multiple: false
       options:
-        -  Not selected
+        - Not selected
         - "Level up!"
         - "Milestone movies"
         - Other channel
@@ -293,10 +280,7 @@ body:
     attributes:
       label: Playlist name
       description: If you selected **Yes** for a playlist, enter the new or existing playlist name.
-      value: |
-        - Existing playlist name:
-        or
-        - New playlist name:
+      value: "Playlist name:"
 
 # Closing section
   - type: markdown
@@ -315,7 +299,7 @@ body:
       label: Update the issue title
       description: Replace `<your video>` in **Add a title** at the top of this form with the name of your video.
       options:
-        - label: I updated the video name in the issue title
+        - label: I updated the video name in the issue title.
           required: true
 
 # Stuff for build admins

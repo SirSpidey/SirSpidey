@@ -24,7 +24,7 @@ body:
     attributes:
       label: Subject
       options:
-        - label: My video is about IBM Cloud platform, services, software, tooling, or other related subject.
+        - label: The video is about IBM Cloud platform, services, software, tooling, or other related subject.
           required: true
   - type: checkboxes
     id: is-correct-resolution
@@ -105,6 +105,14 @@ body:
         Related link 1:
         Related link 2:
         Related link 3:
+    validations:
+      required: false
+  - type: textarea
+    id: chapter-timestamps
+    attributes:
+      label: Chapter timestamps
+      description: "If your video is longer than 5 minutes, you can provide chapters of less than 5 minutes. If your video is divided, provide the timestamps for each chapter along with the label for each section."
+      placeholder: "1. 0:35: Deploy your app"
     validations:
       required: false
   - type: textarea

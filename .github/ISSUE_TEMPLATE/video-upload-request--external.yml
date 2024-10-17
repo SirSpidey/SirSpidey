@@ -19,6 +19,14 @@ body:
   - type: markdown
     attributes:
       value: Confirm that your video meets the following criteria. The video must meet all the criteria to be hosted by IBM Cloud.
+  - type: input
+    id: doc-embed-url
+    attributes:
+      label: Doc topic to hold the video
+      description: All external videos must be embedded in a doc topic. Specify the URL of the IBM Cloud docs topic that will embed the video.
+      placeholder: "https://cloud.ibm.com/docs/..."
+    validations:
+      required: true
   - type: checkboxes
     id: is-related-subject
     attributes:
@@ -33,30 +41,12 @@ body:
       options:
         - label: The video does not contain personal or IBM Confidential information.
           required: true
-  - type: dropdown
-    id: length
-    attributes:
-      label: Length
-      description: If your video is longer than 5 minutes, divide the video into chapters. You'll provide details about the chapters later.
-      options:
-        - The video is less than 5 minutes long
-        - The video is divided into chapters less than 5 minutes long
-    validations:
-      required: true
   - type: checkboxes
     id: is-correct-intro-outro
     attributes:
       label: Intro and outro
       options:
         - label: The video uses the IBM Cloud [intro and outro](https://test.cloud.ibm.com/docs-internal/writing?topic=writing-creating-videos#video-content).
-          required: true
-  - type: checkboxes
-    id: is-text-script-available
-    attributes:
-      label: Accessible
-      description: Your video must have text equivalents for users that can't see or hear your video, typically a caption or a transcript. You'll provide details about the script later.
-      options:
-        - label: A text-equivalent script is available.
           required: true
   - type: checkboxes
     id: is-correct-resolution
@@ -192,12 +182,14 @@ body:
       placeholder: "Example: https://ibm.ent.box.com/file/123453979762"
     validations:
       required: true
-  - type: input
-    id: doc-embed-url
+  - type: dropdown
+    id: length
     attributes:
-      label: Doc topic to hold the video
-      description: Specify the URL of the IBM Cloud docs topic that will embed the video
-      placeholder: "https://cloud.ibm.com/docs/..."
+      label: Length
+      description: If your video is longer than 5 minutes, divide the video into chapters. You'll provide details about the chapters later.
+      options:
+        - The video is less than 5 minutes long
+        - The video is divided into chapters less than 5 minutes long
     validations:
       required: true
   - type: textarea
@@ -212,8 +204,10 @@ body:
     id: script-url
     attributes:
       label: Text-equivalent script
-      description: Include a link to the script for your video. The script must be included in the same topic of your documentation where you embed the video unless the topic covers the content in the video word-for-word. For more information, see [Making your video accessible](https://test.cloud.ibm.com/docs/writing?topic=writing-creating-videos#video-accessibility).
+      description: Your video must have text equivalents for users that can't see or hear your video, typically a caption or a transcript. Include a link to the script for your video. The script must be included in the same topic of your documentation where you embed the video unless the topic covers the content in the video word-for-word. For more information, see [Making your video accessible](https://test.cloud.ibm.com/docs/writing?topic=writing-creating-videos#video-accessibility).
       placeholder: https://cloud.ibm.com/docs/...
+    validations:
+      required: true
   - type: textarea
     id: thumbnail
     attributes:
